@@ -1,11 +1,5 @@
-lista = list(map(int,input("inserisci una lista di numeri separati da spazi").split()))
+list = [1,2,3,4]
+n = max(list)
+print(n)
 
-max = 0
-
-for numero in lista:
-    if numero > max:
-        max = numero
-
-
-
-print(max)
+    

@@ -15,6 +15,6 @@ for i in range(100):
         print(n)
         count += 1
 
-print(count)
+print(f"il numero di passaggi è {count}")
 
         
