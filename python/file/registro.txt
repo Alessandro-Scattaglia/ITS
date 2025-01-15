@@ -1,0 +1,3 @@
+scattaglia,100
+tranaso,99
+minta,104
