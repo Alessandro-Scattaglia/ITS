@@ -1,0 +1,5 @@
+Totale lettere: 368
+Totale spazi: 74
+Totale parole: 78
+Totale virgole: 3
+Totale punti: 9

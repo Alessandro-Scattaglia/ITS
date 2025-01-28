@@ -1,0 +1,23 @@
+Questo è un testo di prova
+
+Che include ben oltre le venti righe
+per testare a fondo il conteggio delle parole.
+
+Prova a contare correttamente
+punteggiatura,
+apostrofi, e
+molti spazi      multipli.
+
+C'è anche una riga
+con   un   certo numero
+di      spazi.
+
+Ma non finisce qui.
+Ancora qualche riga per superare
+il requisito di avere almeno venti righe.
+Così possiamo inserire
+pure un'ultima frase...
+
+Ed ecco la riga numero 21,
+in fondo alla quale
+termina questo testo di esempio.
