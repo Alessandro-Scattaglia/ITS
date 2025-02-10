@@ -1,0 +1,8 @@
+ProdottoA,10
+ProdottoB,5
+ProdottoA,3
+ProdottoC,7
+ProdottoD,4
+ProdottoErrato
+ProdottoF,
+ProdottoB,2

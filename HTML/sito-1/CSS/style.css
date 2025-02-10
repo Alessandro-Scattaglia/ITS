@@ -1,0 +1,20 @@
+h2{
+    color: magenta;
+    font-size: 30px;
+}
+p{
+    color:blue;
+    font-size: 25px;
+}
+
+.text-black{
+    color: black;
+    text-transform: uppercase;
+}
+
+.bg-light{
+    background-color: rgb(225, 225, 225);
+    width: 960px;
+    height: 400px;
+
+}
