@@ -1,0 +1,51 @@
+use esercitazioni;
+
+
+INSERT INTO americhe (stato, capitale) VALUES ('Canada', 'Ottawa'),('Brasile','Brasilia'),('Stati uniti','New York');  
+
+INSERT INTO europa (stato, capitale) VALUES ('Italia', 'Roma'),('Francia','Lione'),('Spagna','Madrid');  
+
+INSERT INTO africa (stato, capitale) VALUES ('Egitto', 'Il Cairo'),('Sudafrica','Pot Elizabet'),('Marocco','Rabat');  
+
+
+
+SELECT 'americhe' as continente, stato, capitale FROM americhe
+UNION 
+SELECT 'africa' as continente, stato, capitale FROM africa
+UNION
+SELECT 'europa' as continente, stato, capitale FROM europa;
+
+
+UPDATE americhe set capitale = 'Washington D.C.' WHERE id=3;
+
+UPDATE americhe set capitale = 'Citta del capo' WHERE id=2;
+
+UPDATE americhe set capitale = 'Parigi' WHERE id=1;
+
+
+
+
+INSERT INTO libro (titolo,prezzo,pagine,id_editore)
+VALUES
+('Marcovaldo', 13.00,204,1),
+('La coscienza di Zeno',14.00,664,2),
+('Furore',12.50,478,1),
+('Il Piccolo Principe', 10.50,124,3);
+
+
+INSERT INTO costumers (Nome, Cognome, Telefono, Email, Provincia)
+VALUES
+    ('Pippo', 'Costanzo', '3212345678', 'pippo.costanzo@gmail.com', 'TO'),
+    ('Maria', 'Filippi', '3332345687', 'maria.filippi@gmail.com', 'MI'),
+    ('Mario', 'Liberato', '3357000678', 'mario.liberato@gicloud.com', 'CN'),
+    ('Grazia', 'Alcanto', '3212345678', 'graziaalcanto@gmail.com', 'MI'),
+    ('Francesco', 'Franco', '3481112345', 'franco.francesco@icloud.com', 'MI');
+    
+UPDATE costumers
+SET Provincia = 'AL'
+WHERE Provincia = 'MI';
+
+
+DELETE FROM costumers
+WHERE Provincia = 'AL';
+
