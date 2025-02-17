@@ -9,9 +9,9 @@ df = pd.read_csv(file_path)
 df['Data'] = pd.to_datetime(df['Data'])  # Conversione colonna data
 
 # Calcoli principali
-total_sales_per_category = df.groupby('Categoria')['Vendite'].sum().to_dict()
-most_sold_product = df.groupby('Prodotto')['Quantita'].sum().idxmax()
-best_day = df.groupby(df['Data'].dt.date)['Vendite'].sum().idxmax()
+total_sales_per_category = df.groupby('Categoria')['Totale'].sum().to_dict()
+most_sold_product = df.groupby('Prodotto')['Quantità'].sum().idxmax()
+best_day = df.groupby(df['Data'].dt.date)['Totale'].sum().idxmax()
 
 # Creazione della tabella HTML
 table_rows = "".join(

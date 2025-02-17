@@ -1,0 +1,101 @@
+ID,Data,Prodotto,Categoria,Prezzo,Quantità,Totale
+1,2025-01-01,Laptop HP,Computer,799.99,3,2399.9700000000003
+2,2025-01-08,Monitor Samsung,Monitor,199.99,2,399.98
+3,2025-01-22,Laptop HP,Computer,799.99,5,3999.95
+4,2025-01-19,Laptop HP,Computer,799.99,4,3199.96
+5,2025-01-01,Mouse Logitech,Periferiche,25.99,1,25.99
+6,2025-01-08,Monitor Samsung,Monitor,199.99,5,999.95
+7,2025-01-01,Webcam Logitech,Periferiche,49.99,5,249.95000000000002
+8,2025-01-23,Monitor Samsung,Monitor,199.99,5,999.95
+9,2025-01-08,SSD Samsung 1TB,Storage,120.99,4,483.96
+10,2025-01-09,Webcam Logitech,Periferiche,49.99,1,49.99
+11,2025-01-23,Tastiera Razer,Periferiche,99.99,4,399.96
+12,2025-01-09,Router TP-Link,Rete,59.99,2,119.98
+13,2025-01-31,Monitor Samsung,Monitor,199.99,3,599.97
+14,2025-01-03,Laptop HP,Computer,799.99,4,3199.96
+15,2025-01-12,Laptop HP,Computer,799.99,3,2399.9700000000003
+16,2025-01-09,Webcam Logitech,Periferiche,49.99,1,49.99
+17,2025-01-18,Scheda Grafica Nvidia,Computer,499.99,1,499.99
+18,2025-01-03,SSD Samsung 1TB,Storage,120.99,5,604.9499999999999
+19,2025-01-27,Stampante Epson,Stampanti,150.0,5,750.0
+20,2025-01-19,Router TP-Link,Rete,59.99,2,119.98
+21,2025-01-02,Laptop HP,Computer,799.99,2,1599.98
+22,2025-01-03,Stampante Epson,Stampanti,150.0,2,300.0
+23,2025-01-13,Laptop HP,Computer,799.99,3,2399.9700000000003
+24,2025-01-21,Scheda Grafica Nvidia,Computer,499.99,3,1499.97
+25,2025-01-12,Tastiera Razer,Periferiche,99.99,3,299.96999999999997
+26,2025-01-22,Monitor Samsung,Monitor,199.99,3,599.97
+27,2025-01-20,Laptop HP,Computer,799.99,2,1599.98
+28,2025-01-24,Cuffie Sony,Audio,89.99,2,179.98
+29,2025-01-15,Tastiera Razer,Periferiche,99.99,4,399.96
+30,2025-01-30,Stampante Epson,Stampanti,150.0,5,750.0
+31,2025-01-22,Monitor Samsung,Monitor,199.99,3,599.97
+32,2025-01-08,Mouse Logitech,Periferiche,25.99,1,25.99
+33,2025-01-13,Router TP-Link,Rete,59.99,3,179.97
+34,2025-01-07,Laptop HP,Computer,799.99,5,3999.95
+35,2025-01-07,Router TP-Link,Rete,59.99,4,239.96
+36,2025-01-29,SSD Samsung 1TB,Storage,120.99,4,483.96
+37,2025-01-09,Tastiera Razer,Periferiche,99.99,2,199.98
+38,2025-01-24,Monitor Samsung,Monitor,199.99,5,999.95
+39,2025-01-09,Cuffie Sony,Audio,89.99,5,449.95
+40,2025-01-29,SSD Samsung 1TB,Storage,120.99,5,604.9499999999999
+41,2025-01-12,SSD Samsung 1TB,Storage,120.99,2,241.98
+42,2025-01-17,Tastiera Razer,Periferiche,99.99,4,399.96
+43,2025-01-25,Laptop HP,Computer,799.99,1,799.99
+44,2025-01-05,Laptop HP,Computer,799.99,2,1599.98
+45,2025-01-20,SSD Samsung 1TB,Storage,120.99,1,120.99
+46,2025-01-13,SSD Samsung 1TB,Storage,120.99,5,604.9499999999999
+47,2025-01-17,Scheda Grafica Nvidia,Computer,499.99,3,1499.97
+48,2025-01-28,Cuffie Sony,Audio,89.99,1,89.99
+49,2025-01-22,Laptop HP,Computer,799.99,5,3999.95
+50,2025-01-25,Stampante Epson,Stampanti,150.0,3,450.0
+51,2025-01-10,Laptop HP,Computer,799.99,4,3199.96
+52,2025-01-15,Tastiera Razer,Periferiche,99.99,1,99.99
+53,2025-01-17,Stampante Epson,Stampanti,150.0,2,300.0
+54,2025-01-30,Cuffie Sony,Audio,89.99,1,89.99
+55,2025-01-27,Stampante Epson,Stampanti,150.0,5,750.0
+56,2025-01-07,Webcam Logitech,Periferiche,49.99,2,99.98
+57,2025-01-25,Router TP-Link,Rete,59.99,2,119.98
+58,2025-01-31,Cuffie Sony,Audio,89.99,5,449.95
+59,2025-01-20,Mouse Logitech,Periferiche,25.99,3,77.97
+60,2025-01-01,Scheda Grafica Nvidia,Computer,499.99,1,499.99
+61,2025-01-29,Router TP-Link,Rete,59.99,3,179.97
+62,2025-01-02,Monitor Samsung,Monitor,199.99,2,399.98
+63,2025-01-31,Webcam Logitech,Periferiche,49.99,1,49.99
+64,2025-01-24,Laptop HP,Computer,799.99,4,3199.96
+65,2025-01-25,Laptop HP,Computer,799.99,5,3999.95
+66,2025-01-05,Tastiera Razer,Periferiche,99.99,4,399.96
+67,2025-01-06,Cuffie Sony,Audio,89.99,3,269.96999999999997
+68,2025-01-28,Cuffie Sony,Audio,89.99,5,449.95
+69,2025-01-31,SSD Samsung 1TB,Storage,120.99,2,241.98
+70,2025-01-25,Cuffie Sony,Audio,89.99,2,179.98
+71,2025-01-13,Stampante Epson,Stampanti,150.0,3,450.0
+72,2025-01-29,Scheda Grafica Nvidia,Computer,499.99,5,2499.95
+73,2025-01-04,Scheda Grafica Nvidia,Computer,499.99,2,999.98
+74,2025-01-03,Monitor Samsung,Monitor,199.99,3,599.97
+75,2025-01-19,Mouse Logitech,Periferiche,25.99,5,129.95
+76,2025-01-19,Monitor Samsung,Monitor,199.99,2,399.98
+77,2025-01-03,Mouse Logitech,Periferiche,25.99,1,25.99
+78,2025-01-03,Monitor Samsung,Monitor,199.99,1,199.99
+79,2025-01-03,Router TP-Link,Rete,59.99,5,299.95
+80,2025-01-09,Monitor Samsung,Monitor,199.99,4,799.96
+81,2025-01-18,Monitor Samsung,Monitor,199.99,2,399.98
+82,2025-01-19,Webcam Logitech,Periferiche,49.99,4,199.96
+83,2025-01-26,Monitor Samsung,Monitor,199.99,4,799.96
+84,2025-01-07,SSD Samsung 1TB,Storage,120.99,1,120.99
+85,2025-01-22,Laptop HP,Computer,799.99,4,3199.96
+86,2025-01-14,Router TP-Link,Rete,59.99,4,239.96
+87,2025-01-28,Scheda Grafica Nvidia,Computer,499.99,1,499.99
+88,2025-01-02,Laptop HP,Computer,799.99,4,3199.96
+89,2025-01-26,Router TP-Link,Rete,59.99,1,59.99
+90,2025-01-07,Monitor Samsung,Monitor,199.99,2,399.98
+91,2025-01-15,Cuffie Sony,Audio,89.99,2,179.98
+92,2025-01-06,SSD Samsung 1TB,Storage,120.99,3,362.96999999999997
+93,2025-01-08,Scheda Grafica Nvidia,Computer,499.99,1,499.99
+94,2025-01-26,Scheda Grafica Nvidia,Computer,499.99,5,2499.95
+95,2025-01-02,Laptop HP,Computer,799.99,5,3999.95
+96,2025-01-03,Mouse Logitech,Periferiche,25.99,2,51.98
+97,2025-01-14,Tastiera Razer,Periferiche,99.99,4,399.96
+98,2025-01-07,Scheda Grafica Nvidia,Computer,499.99,4,1999.96
+99,2025-01-06,Mouse Logitech,Periferiche,25.99,4,103.96
+100,2025-01-13,Mouse Logitech,Periferiche,25.99,3,77.97

@@ -10,25 +10,25 @@
 <body>
     <h1>Analisi delle Vendite</h1>
     <h2>Informazioni chiave</h2>
-    <p>Prodotto più venduto: <strong>Arancia</strong></p>
-    <p>Giorno con più vendite: <strong>2025-02-10</strong></p>
+    <p>Prodotto più venduto: <strong>Laptop HP</strong></p>
+    <p>Giorno con più vendite: <strong>2025-01-22</strong></p>
     
     <h2>Totale vendite per categoria</h2>
     <table border='1'>
         <tr><th>Categoria</th><th>Totale Vendite (€)</th></tr>
-        <tr><td>Alimentari</td><td>515.00</td></tr><tr><td>Casa</td><td>4140.00</td></tr><tr><td>Elettronica</td><td>20600.00</td></tr><tr><td>Sport</td><td>5860.00</td></tr>
+        <tr><td>Audio</td><td>2339.74</td></tr><tr><td>Computer</td><td>64999.09</td></tr><tr><td>Monitor</td><td>9199.54</td></tr><tr><td>Periferiche</td><td>3819.40</td></tr><tr><td>Rete</td><td>1559.74</td></tr><tr><td>Stampanti</td><td>3750.00</td></tr><tr><td>Storage</td><td>3871.68</td></tr>
     </table>
     
-    <h2>Grafico Vendite per Categoria</h2>
+    <h2>Grafico delle vendite per categoria</h2>
     <canvas id='salesChart'></canvas>
     <script>
         new Chart(document.getElementById('salesChart'), {
             type: 'bar',
             data: {
-                labels: ["Alimentari", "Casa", "Elettronica", "Sport"],
+                labels: ["Audio", "Computer", "Monitor", "Periferiche", "Rete", "Stampanti", "Storage"],
                 datasets: [{
                     label: "Vendite (€)",
-                    data: [515, 4140, 20600, 5860],
+                    data: [2339.74, 64999.09, 9199.54, 3819.4, 1559.74, 3750.0, 3871.68],
                     backgroundColor: 'rgba(75, 192, 192, 0.2)',
                     borderColor: 'rgba(75, 192, 192, 1)',
                     borderWidth: 1
