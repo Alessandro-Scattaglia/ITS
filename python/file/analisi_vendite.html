@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang='it'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Analisi Vendite</title>
+    <script src='https://cdn.jsdelivr.net/npm/chart.js'></script>
+</head>
+<body>
+    <h1>Analisi delle Vendite</h1>
+    <h2>Informazioni chiave</h2>
+    <p>Prodotto più venduto: <strong>Arancia</strong></p>
+    <p>Giorno con più vendite: <strong>2025-02-10</strong></p>
+    
+    <h2>Totale vendite per categoria</h2>
+    <table border='1'>
+        <tr><th>Categoria</th><th>Totale Vendite (€)</th></tr>
+        <tr><td>Alimentari</td><td>515.00</td></tr><tr><td>Casa</td><td>4140.00</td></tr><tr><td>Elettronica</td><td>20600.00</td></tr><tr><td>Sport</td><td>5860.00</td></tr>
+    </table>
+    
+    <h2>Grafico Vendite per Categoria</h2>
+    <canvas id='salesChart'></canvas>
+    <script>
+        new Chart(document.getElementById('salesChart'), {
+            type: 'bar',
+            data: {
+                labels: ["Alimentari", "Casa", "Elettronica", "Sport"],
+                datasets: [{
+                    label: "Vendite (€)",
+                    data: [515, 4140, 20600, 5860],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {scales: {y: {beginAtZero: true}}}
+        });
+    </script>
+</body>
+</html>

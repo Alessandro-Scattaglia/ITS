@@ -1,3 +1,9 @@
+*{
+    box-sizing: border-box;
+}
+/*sistema il padding*/
+
+
 h2{
     color: magenta;
     font-size: 30px;
@@ -12,9 +18,25 @@ p{
     text-transform: uppercase;
 }
 
-.bg-light{
-    background-color: rgb(225, 225, 225);
+.container{
+    background-color: rgb(255, 45, 45);
     width: 960px;
     height: 400px;
+    margin: 0 auto;
 
+}
+
+.container-grey{
+    background-color: rgb(190, 190, 190);
+    padding: 10px;
+    width: 960px;
+    height: 400px;
+    margin: 0 auto;
+    
+}
+
+.p1{
+    color:black;
+    font-size: 25px;
+    
 }
