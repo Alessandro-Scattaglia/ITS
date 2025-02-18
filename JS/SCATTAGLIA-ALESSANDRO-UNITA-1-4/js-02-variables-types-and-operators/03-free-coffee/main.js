@@ -3,8 +3,7 @@ let max_eta = 99;
 
 let caffe_giornalieri = 2;
 
-let count = (2*365)*(max_eta-eta);
+let count = (caffe_giornalieri * 365) * (max_eta - eta);
 
 
-console.log(`You will need ${count} cups of coffee to last you until the
-ripe old age of ${max_eta}`)
+console.log(`You will need ${count} cups of coffee to last you until theripe old age of ${max_eta}`)
