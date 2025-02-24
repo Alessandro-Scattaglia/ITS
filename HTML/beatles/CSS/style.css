@@ -1,8 +1,22 @@
-/* Reset styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-style: 16px;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
 html,
 body,
 div,
 span,
+applet,
 object,
 iframe,
 h1,
@@ -14,8 +28,11 @@ h6,
 p,
 blockquote,
 pre,
+a,
 abbr,
+acronym,
 address,
+big,
 cite,
 code,
 del,
@@ -25,14 +42,19 @@ img,
 ins,
 kbd,
 q,
+s,
 samp,
 small,
+strike,
 strong,
 sub,
 sup,
+tt,
 var,
 b,
+u,
 i,
+center,
 dl,
 dt,
 dd,
@@ -55,32 +77,31 @@ article,
 aside,
 canvas,
 details,
-figcaption,
+embed,
 figure,
+figcaption,
 footer,
 header,
 hgroup,
 menu,
 nav,
+output,
+ruby,
 section,
 summary,
 time,
 mark,
 audio,
 video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
-body {
-    line-height: 1;
-}
-
+/* HTML5 display-role reset for older browsers */
 article,
 aside,
 details,
@@ -92,136 +113,281 @@ hgroup,
 menu,
 nav,
 section {
-    display: block;
+  display: block;
 }
 
-nav ul {
-    list-style: none;
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
 }
 
 blockquote,
 q {
-    quotes: none;
+  quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: '';
-    content: none;
-}
-
-a {
-    margin: 0;
-    padding: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
-}
-
-ins {
-    background-color: #ff9;
-    color: #000;
-    text-decoration: none;
-}
-
-mark {
-    background-color: #ff9;
-    color: #000;
-    font-style: italic;
-    font-weight: bold;
-}
-
-del {
-    text-decoration: line-through;
-}
-
-abbr[title],
-dfn[title] {
-    border-bottom: 1px dotted;
-    cursor: help;
+  content: "";
+  content: none;
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #cccccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-input,
-select {
-    vertical-align: middle;
-}
-
-/* Additional styles */
-* {
-    box-sizing: border-box;
-}
-
-section {
-    min-height: 50vh;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 .bg-green {
-    background-color: rgb(43, 204, 45);
+  background-color: green;
+  height: 10vh;
 }
 
 .container {
-    margin: 0 auto;
-    width: 960px;
-    text-align: center;
+  width: 960px;
+  margin: auto;
 }
 
 .bg-dark {
-    background-color: #000;
+  background-color: #000;
+  height: 10vh;
 }
 
 .vh-50 {
-    height: 50vh;
-}
-.black{
-    color: aqua;
+  height: 50vh;
 }
 
 .pt-1 {
-    padding-top: 1rem;
+  padding-top: 1rem;
 }
 
 .pb-1 {
-    padding-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
-h1 {
-    font-size: 3rem;
-    color: rgb(0, 0, 0);
+.py-1 {
+  padding: 1rem 0;
 }
 
-figcaption {
-    text-align: center;
-    margin-top: 20px;
+.mb-1 {
+  margin-bottom: 1rem;
 }
 
-figcaption p {
-    font-size: 1.2rem;
-    font-weight: bold;
+.mt-1 {
+  margin-top: 1rem;
 }
 
-.lorem-container {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 1rem;
-    padding: 0 10%;
+h1,
+.h1 {
+  font-size: 3rem;
+  color: cornflowerblue;
 }
 
-.lorem-container p {
-    margin-bottom: 1rem;
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+/* figure {
+  width: 600px;
+  border: solid 3px rgb(53, 156, 79);
+  padding: 1rem;
+  border-radius: 1rem;
+} */
+
+/* figcaption {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  height: 50px;
+  font-size: 1.2rem;
+  line-height: 50px;
+} */
+
+.img-fluid {
+  display: block;
+  max-width: 100%;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+.bg-blue {
+  background-color: blue;
+  height: 10vh;
+}
+
+.bg-red {
+  background-color: red;
+  height: 10vh;
+}
+
+.item {
+  width: 25%;
+  padding: 1rem;
+  float: left;
+}
+
+.clear {
+  clear: both;
+}
+
+nav {
+  background-color: black;
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 1.5rem 0;
+}
+
+li {
+  color: #fff;
+  width: 20%;
+  background-color: #b4b4b4;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* a {
+  text-decoration: none;
+  color: #fff;
+} */
+
+li:hover,
+.active {
+  background-color: rgb(255, 154, 12);
+}
+
+li.active a,
+li:hover a {
+  color: #2f3a7c;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.menu-destra {
+  margin: 0 0 0 auto;
+}
+
+.logo {
+  aspect-ratio: 1 / 1;
+  width: 48px;
+  background-color: #fff;
+  float: left;
+  margin-left: 1rem;
+
+}
+
+.logo:hover {
+  border-radius: 50%;
+  transition: border-radius .5s;
+}
+
+header {
+  height: calc(100vh - 72px);
+  background-image: url("../img/beatles-abbey-road.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+
+
+}
+
+header h1 {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.600);
+   font-family: "Roboto", serif;
+  line-height: calc(100vh -56px -1rem);
+  font-size: 120px;
+  font-weight: 600;
+}
+
+header h1 span {
+  text-transform: uppercase;
+}
+
+.col-4,
+.col-8,
+.col-12,.col-6{
+  padding: 0 1rem;
+  float: left;
+  height: 25vh;
+}
+
+.col-4{
+  width: 33.333%;
+
+}
+.col-6{
+  width: 50%;
+  
+}
+.col-8{
+  width: 66.666%;
+
+}
+.col-12{
+  width: 100%;
+
+}
+
+.img-fluid {
+ max-width: 100%;
+}
+
+.elemento{
+  margin: 3rem 0;
+}
+.elemento h2{
+  font-size: 3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+.elemento p{
+  margin-bottom: 1rem;
+  font-size: x-large;
+}
+.elemento figcaption{
+  text-align: center;
+  padding: .5rem 0;
+  font-size: 1.5rem;
+}
+.clear {
+  clear: both;
+}
+
+
+.seppia {
+  filter: sepia(100%);
+}
+
+.bianco-e-nero {
+  filter: grayscale(100%);
+}
+
+.invertito {
+  filter: invert(100%);
+}
+
+.blur {
+  filter: blur(5px);
 }
