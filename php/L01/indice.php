@@ -1,4 +1,4 @@
-<?php define('TITOLO', 'Benvenuto nel mio sito web PHP powered'):?>
+<?php define('TITOLO', 'Benvenuto nel mio sito web PHP powered')?>
 <?php include 'intestazione.php';?>
 
 <h1><?= TITOLO ?></h1>
