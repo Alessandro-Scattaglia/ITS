@@ -1,0 +1,8 @@
+h1{
+    color: lime;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline;
+}

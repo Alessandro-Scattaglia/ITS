@@ -1,0 +1,1 @@
+<img src="./img/webmobile_img-400x250.png" alt="immagine">
