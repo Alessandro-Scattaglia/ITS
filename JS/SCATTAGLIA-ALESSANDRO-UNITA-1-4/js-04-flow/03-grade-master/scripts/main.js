@@ -1,3 +1,13 @@
+/**
+ * Author: Alessandro Scattaglia
+ * 
+ * Assigns a grade based on the score input.
+ * @example
+ * // Outputs:
+ * // "A"
+ * assignGrade(100);
+ */
+
 function assignGrade(score) {
     let grade;
     switch (score) {
