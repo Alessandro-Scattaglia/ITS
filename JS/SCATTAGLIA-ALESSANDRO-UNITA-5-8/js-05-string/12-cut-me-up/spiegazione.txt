@@ -1,0 +1,20 @@
+Differenze tra slice(), substring() e substr()
+
+
+
+**slice()**
+
+Estrae la sottostringa inclusa tra l'indice start(incluso) e end(non incluso) e la restituisce come nuova stringa, senza modificare la stringa originale.
+Esempio: str.slice(7, 12) → "world"
+
+
+**substring()**
+
+Estrae una sottostringa a partire dall'indice start fino all'indice end.
+Esempio: str.substring(7, 12) → "world"
+
+
+**substr()** (deprecato)
+
+Estrae a partire da start con una lunghezza di length.
+Esempio: str.substr(7, 5) → "world"
