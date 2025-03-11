@@ -4,11 +4,11 @@
  * Reverses a string and logs the result.
  * @example
  * // Outputs:
- * // "rabtoof"
+ * // "raboof"
  */
 
-function printReverse(string) {
-    console.log(string.split("").reverse().join(""));
+function printReverse(str) {
+    console.log(str.split("").reverse().join(""));
 }
 
-printReverse("footbar");
+printReverse("foobar");

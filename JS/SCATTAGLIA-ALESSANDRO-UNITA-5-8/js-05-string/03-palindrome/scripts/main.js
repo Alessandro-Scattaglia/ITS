@@ -7,8 +7,8 @@
  * // true
  */
 
-function isPalindrome(string) {
-    if (string == string.split("").reverse().join("")) {
+function isPalindrome(str) {
+    if (str == str.split("").reverse().join("")) {
         return true;
     } else {
         return false;

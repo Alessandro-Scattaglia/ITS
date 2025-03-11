@@ -9,15 +9,15 @@
  * // "go"
  */
 
-function verbing(string) {
-    if (string.length < 3) {
-        console.log(string);
+function verbing(str) {
+    if (str.length < 3) {
+        console.log(str);
     }
-    else if ((string.slice(-3) == "ing")) {
-        console.log(string + "ly");
+    else if ((str.slice(-3) == "ing")) {
+        console.log(str + "ly");
     }
     else {
-        console.log(string + "ing");
+        console.log(str + "ing");
     }
 }
 

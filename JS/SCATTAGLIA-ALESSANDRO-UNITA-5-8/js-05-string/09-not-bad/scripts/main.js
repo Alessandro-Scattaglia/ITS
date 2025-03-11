@@ -9,8 +9,8 @@
  * // "This dinner is bad!"
  */
 
-function notBad(string) {
-    return string.replace(/not.*bad/, 'good');
+function notBad(str) {
+    return str.replace(/not.*bad/, 'good');
 }
 
 console.log(notBad("This dinner is not that bad!")); 

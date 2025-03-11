@@ -7,8 +7,8 @@
  * // "rabtoof"
  */
 
-function printReverse(string) {
-    return string.split("").reverse().join("");
+function printReverse(str) {
+    return str.split("").reverse().join("");
 }
 
 console.log(printReverse("footbar"));

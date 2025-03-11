@@ -8,13 +8,13 @@
  * // "My Name Is John"
  */
 
-function capital(string) {
-    let string1 = string.charAt(0);
-    console.log(string1.toUpperCase() + string.slice(1));
+function capital(str) {
+    let text = str.charAt(0);
+    console.log(text.toUpperCase() + str.slice(1));
 }
 
-function capital2(string) {
-    const parole = string.split(' ');
+function capital2(str) {
+    const parole = str.split(' ');
 
     for (let i = 0; i < parole.length; i++) {
         parole[i] = parole[i].charAt(0).toUpperCase() + parole[i].slice(1);

@@ -7,8 +7,8 @@
  * // true
  */
 
-function aContainsB(string1, string2) {
-    if (string1.indexOf(string2) != -1) {
+function aContainsB(str, text) {
+    if (str.indexOf(text) != -1) {
         return true;
     } else {
         return false;
