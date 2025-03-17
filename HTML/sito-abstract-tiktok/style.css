@@ -1,0 +1,71 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'GT America Standard', sans-serif;
+}
+
+
+.navbar {
+    background-color: #000000;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 68px;
+}
+
+.container {
+    width: 75%;
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.button1{
+    padding: 6px 22px;
+    font-size: 24px;
+    line-height: 1.5;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 0;
+    margin: 600px;
+    border: 1px solid transparent;
+    background-image: none;
+    vertical-align: middle;
+    text-align: center;
+    font-family: "GT America Standard", serif;
+    font-weight: 400;
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+    border-color: #ccc;
+    border-radius: 8px;
+
+}
+.logo {
+    height: 32px;
+    width: auto;
+}
+
+
+.help {
+    margin-left: 10px;
+    margin-bottom: -4px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 25px;
+    transition: color 0.2s ease-in-out;
+}
+
+.help:hover {
+    text-decoration: underline;
+}
