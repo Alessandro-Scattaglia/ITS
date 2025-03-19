@@ -1,3 +1,13 @@
-let array1 = ["bianco", "cane", 3, "pirati dei caraibi"];
+let choices = ["blue", "dog", "The Hobbit", "pizza"];
 
-console.log("My 1st choice is " + array1[0]);
+for (let i = 0; i < choices.length; i++) {
+    let suffix = "th";
+    if (i === 0) {
+        suffix = "st";
+    } else if (i === 1) {
+        suffix = "nd";
+    } else if (i === 2) {
+        suffix = "rd";
+    }
+    console.log(`My ${i + 1}${suffix} choice is ${choices[i]}.`);
+}
