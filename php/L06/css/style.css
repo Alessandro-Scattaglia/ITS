@@ -1,0 +1,15 @@
+#header{
+    border: 1px solid black;
+}
+#footer{
+    border: 1px solid black;
+}
+#sidebar{
+    border: 1px solid black;
+    float: left;
+    width: 25%;
+}
+#content{
+    border: 1px solid black;
+    width: 72%;
+}
