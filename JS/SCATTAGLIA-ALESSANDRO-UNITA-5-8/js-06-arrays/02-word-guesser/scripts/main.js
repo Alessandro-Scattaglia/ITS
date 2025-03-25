@@ -1,3 +1,17 @@
+/**
+ * Author: Alessandro Scattaglia
+ * 
+ * Implements a simple hangman-style guessing game.
+ * @example
+ * // Outputs:
+ * // "_ _ _"
+ * // "Wrong letter. Guesses left: 5"
+ * // "_ A _"
+ * // "Correct letter!"
+ * // "C A T"
+ * // "You won!"
+ */
+
 let word = ['C', 'A', 'T'];
 let guessed = ['_', '_', '_'];
 let maxGuesses = 6;
