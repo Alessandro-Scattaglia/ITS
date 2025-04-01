@@ -1,12 +1,23 @@
-function usefull () {
-  console.log("usefull");
+/**
+ * Author: Alessandro Scattaglia
+ * 
+ * Demonstrates the use of `setTimeout` to schedule a function execution after a delay and then cancel it using `clearTimeout`.
+ * @example
+ * // Outputs:
+ * // "function cancelled" (after 5 seconds)
+ * // No output for "Doing something useful..." because it is cancelled before execution (after 10 seconds).
+ */
+
+function useful() {
+  console.log("Doing something useful...");
 }
-setTimeout(usefull, 3000);
 
+let task = setTimeout(useful, 10000);
 
-function cancelled () {
+function cancelUseful() {
+  clearTimeout(task);
   console.log("function cancelled");
 }
-let cancel = setTimeout(cancelled, 2000);
 
-clearTimeout(cancelled);
+setTimeout(cancelUseful, 5000);
+
