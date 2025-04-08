@@ -232,6 +232,10 @@ select {
   flex-wrap: wrap;
   margin: 0 -1rem;
   align-items: center;
+  align-items: stretch;
+}
+.row-reverse {
+  flex-direction: row-reverse;
 }
 
 .col-4 {
@@ -250,6 +254,26 @@ select {
   width: 50%;
   padding: 1rem;
 }
+
+.bg-img-1 {
+  background-image: url("https://picsum.photos/500/250");
+}
+
+.bg-img-2 {
+  background-image: url("https://picsum.photos/500/250");
+}
+
+.bg-img-3 {
+  background-image: url("https://picsum.photos/800/600");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+
+}
+
+
+
 p {
   font-size: 1.2rem;
   margin-bottom: 1rem;
@@ -306,101 +330,128 @@ h1 {
 }
 .map-container {
   aspect-ratio: 1/1;
-
 }
-.iframe{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
+.iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 footer {
-    background-color: #25344d;
-    color: white;
-    padding: 50px 0 20px;
-    font-size: 14px;
+  background-color: #25344d;
+  color: white;
+  padding: 50px 0 20px;
+  font-size: 14px;
 }
 
 .footer-logo {
-    width: 150px;
-    margin-bottom: 15px;
+  width: 150px;
+  margin-bottom: 15px;
 }
 
 .footer-slogan {
-    color: #ccc;
-    line-height: 1.4;
+  color: #ccc;
+  line-height: 1.4;
 }
 
 .footer-title {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: #fff;
-    position: relative;
-    padding-bottom: 10px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #fff;
+  position: relative;
+  padding-bottom: 10px;
 }
 
 .footer-title::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 50px;
-    height: 2px;
-    background-color: #f8b334;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  background-color: #f8b334;
 }
 
 .footer-menu {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .footer-menu li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .footer-link {
-    color: #ccc;
-    text-decoration: none;
+  color: #ccc;
+  text-decoration: none;
 }
 
 .footer-address p {
-    margin-bottom: 10px;
-    color: white;
-  
+  margin-bottom: 10px;
+  color: white;
 }
 
 .social-icons {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+.social-circle:hover {
+  background-color: #ffffff;
+  color: #3a4a65;
 }
 
 .social-circle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #3a4a65;
-    color: white;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #3a4a65;
+  color: white;
+  text-decoration: none;
 }
 
-
 .company-info {
-    border-top: 1px solid #3a4a65;
-    padding-top: 20px;
-    margin-top: 30px;
-    text-align: center;
-    color: #999;
-    font-size: 12px;
+  border-top: 1px solid #3a4a65;
+  padding-top: 20px;
+  margin-top: 30px;
+  text-align: center;
+  color: #999;
+  font-size: 12px;
 }
 
 .company-info p {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+
+.player{
+  background-color: #4caf50;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ico{
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ico a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
