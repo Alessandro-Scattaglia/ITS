@@ -1,0 +1,24 @@
+li {
+    font-family: Arial, sans-serif;
+    list-style: none;
+    border-radius: 8px;
+    padding: 12px;
+    transition: background-color 0.5s;
+  }
+  
+  /* Colore alternativo via CSS */
+  .read {
+    background-color: lightgreen !important;
+    color: black;
+  }
+  
+  .unread {
+    background-color: tomato !important;
+    color: white;
+  }
+  
+  img {
+    border: 2px solid #ccc;
+    border-radius: 4px;
+  }
+  
