@@ -1,0 +1,49 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+
+h1{
+    color: #32abdf;
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#immagini{
+    display: flex;
+    height: 90%;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+figure {
+    border: thin #ff0000 solid;
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
+    max-width: 220px;
+    margin: auto;
+}
+  
+img {
+    width: 220px;
+    height: 150px;
+    object-fit: cover;
+}
+  
+figcaption {
+    background-color: #ff9f9f;
+    color: #ff2222;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
+
