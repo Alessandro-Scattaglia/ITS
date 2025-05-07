@@ -1,0 +1,303 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Reset CSS */
+  html,
+  body,
+  div,
+  span,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  abbr,
+  address,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  samp,
+  small,
+  strong,
+  sub,
+  sup,
+  var,
+  b,
+  i,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+  }
+  
+  body {
+    line-height: 1;
+    font-size: 16px;
+  }
+  
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  blockquote,
+  q {
+    quotes: none;
+  }
+  
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: "";
+    content: none;
+  }
+  
+  a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+  }
+  
+  ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+  }
+  
+  del {
+    text-decoration: line-through;
+  }
+  
+  abbr[title],
+  dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+  }
+  
+  input,
+  select {
+    vertical-align: middle;
+  }
+  
+  .logo {
+    width: 100px;
+  }
+  
+  .navbar {
+    background-color: #25344d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+  }
+  
+  .navbar ul {
+    display: flex;
+    gap: 15px;
+    padding: 0;
+  }
+  
+  .navbar ul li {
+    list-style: none;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 10px;
+  }
+  
+  .hero {
+    position: relative;
+  }
+  
+  .bg-header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+  .text-overlay {
+    position: absolute;
+    top: 25%;         
+    left: 10%;         
+    color: white;
+    font-size: 3rem;   
+    font-weight: bold;
+    z-index: 2; 
+    padding: 1rem 2rem;
+    border-radius: 12px;
+  }
+  
+  
+  .hero-text {
+    position: absolute;
+    top: 80%;
+    left: 70%;
+    color: white;
+    font-size: 2rem;
+  }
+
+  .container {
+    width: 960px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+  }
+
+
+  
+  .bg-header {
+    width: 100%;
+    height: calc(100vh - 68.98px);
+    object-fit: cover;
+    display: block;
+    position: relative;
+    filter: brightness(75%);
+  }
+
+  .navbar {
+    background-color: #861010;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border: none;
+  }
+
+  .navbar ul {
+    display: flex;
+    gap: 20px;
+  }
+  .col-3 {
+    width: 25%;
+    padding: 1rem;
+  }
+  .col-6 {
+    width: 50%;
+    padding: 1rem;
+  }
+.col-12{
+    width: 100%;
+    padding: 1rem;
+  }
+  .col-4 {
+    width: 33.33%;
+    padding: 1rem;
+  }
+  .col-8 {
+    width: 66.67%;
+    padding: 1rem;
+  }
+
+  .partite {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; 
+    position: relative;
+    top: -100px; 
+    z-index: 3;
+  }
+  
+  .partite img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    background-color: white;
+  }
+  
+  .partite img:hover {
+    transform: scale(1.05);
+  }
+  
