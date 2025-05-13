@@ -1,0 +1,68 @@
+[
+    {
+      "id": 1,
+      "make": "Toyota",
+      "model": "Corolla",
+      "year": 2021,
+      "electric": false,
+      "features": ["Air Conditioning", "Bluetooth", "Backup Camera"],
+      "specs": {
+        "engine": "1.8L",
+        "transmission": "Automatic"
+      },
+      "owner": null
+    },
+    {
+      "id": 2,
+      "make": "Tesla",
+      "model": "Model 3",
+      "year": 2022,
+      "electric": true,
+      "features": ["Autopilot", "Heated Seats"],
+      "specs": {
+        "battery": "75 kWh",
+        "range": "350 miles"
+      },
+      "owner": null
+    },
+    {
+      "id": 3,
+      "make": "Ford",
+      "model": "Focus",
+      "year": 2019,
+      "electric": false,
+      "features": ["Cruise Control", "Bluetooth"],
+      "specs": {
+        "engine": "2.0L",
+        "transmission": "Manual"
+      },
+      "owner": null
+    },
+    {
+      "id": 4,
+      "make": "BMW",
+      "model": "i3",
+      "year": 2020,
+      "electric": true,
+      "features": ["Navigation", "Keyless Entry"],
+      "specs": {
+        "battery": "42 kWh",
+        "range": "180 miles"
+      },
+      "owner": null
+    },
+    {
+      "id": 5,
+      "make": "Honda",
+      "model": "Civic",
+      "year": 2023,
+      "electric": false,
+      "features": ["Lane Assist", "Touchscreen"],
+      "specs": {
+        "engine": "2.0L",
+        "transmission": "CVT"
+      },
+      "owner": null
+    }
+  ]
+  

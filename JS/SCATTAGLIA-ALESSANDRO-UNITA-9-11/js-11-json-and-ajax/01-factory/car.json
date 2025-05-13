@@ -1,0 +1,14 @@
+{
+    "id": 1,
+    "make": "Toyota",
+    "model": "Corolla",
+    "year": 2021,
+    "electric": false,
+    "features": ["Air Conditioning", "Bluetooth", "Backup Camera"],
+    "specs": {
+      "engine": "1.8L",
+      "transmission": "Automatic"
+    },
+    "owner": null
+  }
+  

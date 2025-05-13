@@ -1,0 +1,13 @@
+{
+    "id": 101,
+    "name": "AutoBuild Co.",
+    "location": "Detroit, MI",
+    "operating": true,
+    "departments": ["Assembly", "Painting", "Quality Control"],
+    "details": {
+      "employees": 1200,
+      "opened": 1998
+    },
+    "notes": null
+  }
+  
