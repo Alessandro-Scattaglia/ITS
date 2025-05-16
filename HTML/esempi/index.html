@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Scrollspy + Modal Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      position: relative;
+    }
+
+    section {
+      padding: 100px 0;
+      border-bottom: 1px solid #ccc;
+    }
+  </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar-spy" data-bs-offset="80" tabindex="0">
+
+  <!-- Navbar fissa con Scrollspy -->
+  <nav id="navbar-spy" class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Bootstrap Magic</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servizi">Servizi</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contatti">Contatti</a></li>
+        </ul>
+        <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#authModal">
+          Login / Registrati
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sezioni scrollabili -->
+  <section id="home">
+    <div class="container">
+      <h1>Home</h1>
+      <p>Contenuto introduttivo. Scorri per vedere Scrollspy in azione.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam delectus excepturi porro. Nulla veritatis magnam
+        natus vitae sint iure quibusdam, culpa consequatur aut reiciendis alias ea ratione amet, eveniet deserunt? Iure,
+        eligendi? Eligendi facilis, doloribus a laboriosam possimus iure ad placeat veritatis adipisci magni fuga sed
+        natus similique hic, totam quidem unde! Ut, excepturi quis? Distinctio, natus? Mollitia eius ullam sapiente
+        ipsum. Officiis dolore autem reiciendis ipsam, eligendi obcaecati nesciunt atque quo consectetur animi esse aut
+        earum praesentium veritatis nobis distinctio magni aliquid natus laudantium perferendis accusantium voluptatum
+        fuga expedita molestiae! Voluptate harum aperiam, inventore quo magnam quam debitis eaque ea veniam cupiditate
+        eos iure cum temporibus nemo, consectetur animi quos tempore. Labore, tempore veritatis quas eum eos optio
+        maxime sunt amet nobis necessitatibus, expedita minus voluptatum maiores aperiam, perferendis quia. Sint,
+        voluptas. Saepe ut perspiciatis asperiores consequatur natus adipisci! Assumenda deserunt unde, libero molestias
+        iusto rem reiciendis veritatis harum asperiores pariatur illo voluptates voluptatem eveniet autem dolorum! Modi
+        maiores nisi reiciendis adipisci corrupti rerum repellat saepe at deleniti provident? Eum consequatur provident
+        qui dignissimos rem minima labore, nemo perspiciatis aut eligendi voluptate, facilis laudantium id optio
+        laboriosam repellendus voluptates vel tempore officiis officia, aspernatur rerum ipsam voluptatem hic. Molestias
+        ipsa consequuntur magnam, error quae a cumque nostrum officiis fugiat tempora, alias ea minus vero sequi animi
+        omnis doloremque facere, tempore dignissimos dolorum asperiores fugit! Velit consequuntur ad odit molestiae
+        facere, quo exercitationem numquam at eos alias debitis ducimus architecto inventore voluptatum corporis.
+        Nesciunt architecto explicabo aliquid dolorum neque nobis quod. Cumque, consectetur laboriosam alias veritatis
+        placeat ratione possimus consequuntur dolore? Autem doloremque, error, molestiae nulla quis corrupti delectus
+        nisi, porro laboriosam atque alias adipisci tenetur! Iure libero excepturi ut, doloremque possimus, quis
+        necessitatibus, in fugiat unde suscipit aliquam! Quas dolor itaque aliquid iusto. Ullam reiciendis, facere neque
+        nam animi ab temporibus modi ducimus commodi quidem fugit adipisci repudiandae molestias aspernatur possimus
+        quaerat minima deserunt quod odio magni, fuga culpa accusamus? Necessitatibus deserunt, ipsa consequatur
+        expedita quaerat nihil commodi exercitationem veniam, inventore numquam odio tenetur? Itaque earum quia
+        excepturi odio quam consectetur accusantium eaque velit odit perspiciatis molestiae deleniti, repellendus
+        laborum, amet numquam expedita culpa minus dolores quo commodi! Dolorem numquam natus cum aperiam at nesciunt.
+        Est accusamus similique tempora, perspiciatis eveniet enim sapiente sint, ad cumque sequi earum eum architecto
+        soluta commodi fugiat labore officia. Vero, voluptatum. Blanditiis labore officiis doloribus nemo pariatur ex
+        veritatis iure nam, neque debitis, dolorem sed beatae vero? Porro ad perspiciatis a omnis delectus sequi ipsum
+        quidem nam, itaque iste, voluptate hic expedita ex magnam. Veniam id voluptas cumque ipsum voluptatibus
+        molestias deserunt. Hic quas similique velit omnis ducimus, autem quibusdam laborum alias. Non, temporibus
+        voluptatibus. Molestias possimus nulla impedit quibusdam. Porro aperiam perspiciatis voluptatem sit dignissimos
+        sapiente molestiae qui nulla quisquam! Ullam recusandae tempore reiciendis tempora reprehenderit culpa fuga
+        molestiae, dolores dolore unde accusamus quo necessitatibus eum esse architecto voluptas illo sit assumenda.
+        Nulla doloribus, soluta dignissimos architecto quam nesciunt sint. Pariatur reprehenderit ipsam ea expedita.
+        Temporibus dolor officia laborum, ex molestias qui.
+      </p>
+    </div>
+  </section>
+
+  <section id="servizi">
+    <div class="container">
+      <h1>Servizi</h1>
+      <p>Spiegazione dei servizi offerti.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores voluptatem odit quam natus ratione sunt rerum
+        ipsum in vero praesentium placeat, maiores recusandae cum possimus iure consectetur quaerat doloribus eum fuga
+        modi perspiciatis quisquam! Assumenda architecto nisi porro laboriosam. Quam blanditiis, illum obcaecati
+        assumenda a facere sint distinctio laudantium explicabo, consectetur architecto commodi. Nostrum vel
+        necessitatibus autem assumenda, quas impedit fugiat reprehenderit, nobis similique itaque, iure doloribus
+        numquam? Velit, obcaecati. Dolor, incidunt modi aliquid necessitatibus repudiandae exercitationem deserunt quod
+        quibusdam, veniam dolore laboriosam similique quisquam eos architecto ullam voluptate, vitae amet. Consectetur
+        vero ab, facere ut sed temporibus aperiam id ipsam non tempore corporis molestias itaque. Itaque soluta enim
+        voluptate, hic totam dolorum et. Inventore mollitia nihil quaerat aliquam assumenda. Ducimus aspernatur laborum
+        dolores! Possimus ipsam vitae quam excepturi quibusdam deserunt maiores ab perspiciatis. Tempore autem, velit
+        natus voluptates facilis impedit itaque expedita inventore consectetur placeat minima rerum eaque tempora est
+        nulla dignissimos atque deleniti excepturi accusamus nesciunt! Eaque doloremque atque explicabo odit voluptatem
+        deleniti sed consectetur, numquam quod, nisi placeat sint. Commodi saepe dolorum fuga nesciunt, accusamus
+        consectetur omnis rem fugiat ullam debitis reprehenderit magnam temporibus animi ex. Ad quis ratione nemo,
+        quisquam quidem, ea odio atque iste quaerat ut ab tenetur repellendus aperiam consectetur harum ex cumque
+        expedita quibusdam libero amet. Architecto magni, sequi consequatur eos dolor quae error sapiente pariatur
+        reprehenderit sunt id quaerat laudantium amet velit quisquam eveniet cumque? Laudantium exercitationem adipisci
+        quibusdam sint commodi voluptates, possimus, quia harum blanditiis esse est quos fugiat deserunt architecto
+        dolorum? Fugit atque sapiente dolorum, blanditiis consequatur quibusdam inventore, quae ipsam consequuntur
+        aperiam aut amet, impedit iste ab. Fugiat quisquam autem explicabo veniam vel vero impedit porro, error
+        voluptate numquam nostrum et reprehenderit enim eius distinctio eaque cumque odit laudantium illum nobis quasi
+        magni voluptas. Placeat rerum repudiandae eos culpa ducimus illum, facilis perferendis? Vero suscipit hic
+        sapiente quae corrupti velit praesentium dolorum laboriosam expedita tempora molestiae pariatur error quam,
+        corporis ab labore enim numquam, quisquam veniam cumque magni tempore quos aliquid dignissimos. Quisquam dolores
+        dolor, fuga minus cum, non in nemo inventore adipisci sunt, sed vero officia praesentium ratione tempore
+        corporis voluptate. Natus, blanditiis incidunt doloremque beatae quidem maiores at hic et dolore earum expedita
+        obcaecati recusandae totam corrupti sunt eos aliquam sequi laborum eveniet possimus consequatur iure. Quis optio
+        dolorem eos repudiandae, nihil ipsa laudantium iusto, distinctio sapiente libero architecto aut repellendus sint
+        veritatis! Architecto excepturi adipisci accusantium esse quibusdam aperiam voluptatibus quisquam saepe
+        consequuntur earum rem, ratione neque delectus distinctio vitae, placeat recusandae perspiciatis amet aut
+        aspernatur aliquam! Fugit, aperiam consectetur! Laboriosam, provident rerum eos sit ullam veritatis a qui,
+        voluptates perspiciatis facilis atque fugiat debitis, aperiam ipsam placeat modi accusantium et repellat? Earum
+        reprehenderit debitis accusamus iusto maxime illum expedita tenetur tempora natus officia omnis quod maiores
+        praesentium libero voluptates, dolores cumque iste magnam laborum iure? Sapiente labore quod eius, illo dolorem
+        atque quos delectus repellat at voluptates harum illum amet maxime inventore? Veniam obcaecati necessitatibus
+        reprehenderit? Dignissimos at a distinctio corporis, labore quibusdam iste explicabo.
+      </p>
+    </div>
+  </section>
+
+  <section id="contatti">
+    <div class="container">
+      <h1>Contatti</h1>
+      <p>Modulo o dettagli per contattare l’azienda.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium cupiditate et, id ab laboriosam veniam,
+        exercitationem perspiciatis recusandae maiores qui illum incidunt obcaecati est ipsa quae ratione adipisci
+        repellat laborum alias vitae veritatis. Culpa minima veniam corporis deserunt, quas omnis iure id tenetur alias
+        ad nihil assumenda dolores, asperiores possimus voluptates temporibus aliquid harum consequuntur. Ad cumque
+        reprehenderit officia et adipisci, iure facilis iste omnis ex, ratione iusto dolorum repudiandae rerum aliquid
+        recusandae. Similique cupiditate voluptas voluptatibus dolorem dolores quam, alias laborum et? Tenetur dolorem
+        deleniti molestias! Voluptate dolores unde alias laudantium? Veritatis sunt recusandae totam eos, voluptates
+        odio ex assumenda, inventore non, velit eum nesciunt? Dolor totam, illum quibusdam nostrum perferendis, veniam
+        quidem mollitia voluptate quasi accusantium nihil alias, culpa aut modi magnam doloribus molestias delectus?
+        Odio fugit id repellat voluptas adipisci quia eligendi velit rem, eum similique neque, fugiat aperiam, expedita
+        temporibus sapiente. Qui recusandae itaque repellat magnam inventore tempora expedita. Ipsam, laudantium ex
+        architecto fugiat voluptates nesciunt et autem reiciendis aspernatur accusantium ab odio incidunt culpa animi
+        vel omnis reprehenderit. Voluptas quibusdam provident deserunt, voluptates mollitia quidem incidunt! Id ipsa
+        beatae obcaecati! Accusantium consequatur porro rem necessitatibus, sequi minus reprehenderit aspernatur est.
+        Nam ipsa autem, architecto et quae at sapiente, ipsum quidem quas quisquam quibusdam debitis voluptas rerum
+        doloribus qui aperiam iure sed officiis. Molestias nesciunt autem error neque sit officia, animi aut accusantium
+        sequi odio mollitia debitis minus numquam dolorum necessitatibus, dicta, repellendus reprehenderit. Quas velit
+        voluptas sunt sint similique impedit dolore. Fugiat recusandae et, dolores odit nisi veniam nesciunt iusto
+        nostrum placeat maxime harum ullam accusantium explicabo nam voluptatum quaerat tenetur incidunt blanditiis
+        corporis cumque deleniti, nemo ad veritatis eos! Ipsa repellendus eveniet debitis commodi, ullam necessitatibus
+        nisi veniam sint fugiat quam. Impedit repellendus odio molestias ut perferendis sed nisi, dolore aperiam iure
+        rem, repellat deleniti ipsam consectetur quae nobis. Deserunt quo veritatis tenetur quisquam voluptate? Alias
+        magni amet cumque nobis corporis? Dolorum, incidunt sunt commodi amet dignissimos iure natus repellat recusandae
+        laborum libero fuga delectus, architecto nisi quod, itaque at deserunt eos inventore ea excepturi! Eius nobis
+        nostrum cupiditate voluptate esse iure eaque quod nemo ea quam sapiente, autem sint dolor voluptatum consectetur
+        maiores aperiam! Fuga maxime hic similique commodi necessitatibus dicta sapiente ducimus dolorum vel sequi
+        consequatur beatae, excepturi inventore voluptatem! Non tenetur architecto illum voluptate qui neque dicta
+        corporis, cupiditate enim, officiis in molestiae nam quibusdam nisi. Unde in hic corporis est quis placeat
+        reiciendis libero nulla quod. Natus rerum quasi cumque distinctio ut, ad est eligendi similique vitae maxime
+        aliquid, voluptatum obcaecati alias esse, quae exercitationem nulla repudiandae qui tenetur. Animi a mollitia
+        maiores sed quisquam deleniti eos natus? Quam, nemo ex. Rerum dolorum, temporibus adipisci qui vero impedit
+        ipsa? Ratione veritatis porro dolor mollitia, perferendis nobis molestiae reprehenderit quis harum, in dolores
+        dignissimos. Sequi ullam quas dolore mollitia voluptatem optio repellat veniam, aperiam non vitae quia qui
+        repudiandae nisi deserunt vero laborum ex in! Cum nostrum non possimus minima repellendus fugit similique. Nisi
+        voluptas unde quidem aperiam, soluta laboriosam possimus?
+      </p>
+    </div>
+  </section>
+
+  <!-- Modale Login/Registrazione -->
+  <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="authModalLabel">Accedi o Registrati</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Tabs -->
+          <ul class="nav nav-tabs" id="authTabs" role="tablist">
+            <li class="nav-item">
+              <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login"
+                role="tab">Login</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register"
+                role="tab">Registrati</button>
+            </li>
+          </ul>
+
+          <!-- Contenuti -->
+          <div class="tab-content mt-3">
+            <div class="tab-pane fade show active" id="login" role="tabpanel">
+              <form>
+                <div class="mb-3">
+                  <label>Email</label>
+                  <input type="email" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                  <label>Password</label>
+                  <input type="password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Accedi</button>
+              </form>
+            </div>
+
+            <div class="tab-pane fade" id="register" role="tabpanel">
+              <form>
+                <div class="mb-3">
+                  <label>Nome</label>
+                  <input type="text" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                  <label>Email</label>
+                  <input type="email" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                  <label>Password</label>
+                  <input type="password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-success w-100">Registrati</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
