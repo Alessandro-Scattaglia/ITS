@@ -1,4 +1,18 @@
-// Funzioni di calcolo
+/**
+ * Author: Alessandro Scattaglia
+ * 
+ * Performs basic calculations (square, half, percentage, and area of a circle)
+ * based on user input and shows the result. Supports both button clicks and Enter key.
+ * 
+ * @example
+ * // Inputs:
+ * // - square: 4 → "Result: 16"
+ * // - half: 10 → "Result: 5"
+ * // - percent: 20 and 50 → "Result: 40%"
+ * // - area: 3 → "Result: 28.27"
+ * // User can press Enter to trigger the same calculations
+ */
+
 function square(num) {
     return num * num;
 }
@@ -35,7 +49,6 @@ document.getElementById('area-button').addEventListener('click', function () {
     const val = parseFloat(document.getElementById('area-input').value);
     document.getElementById('solution').textContent = `Result: ${area(val).toFixed(2)}`;
 });
-
 
 document.querySelectorAll('input').forEach(input => {
     input.addEventListener('keypress', function (event) {

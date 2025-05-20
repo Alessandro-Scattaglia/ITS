@@ -1,3 +1,17 @@
+/**
+ * Author: Alessandro Scattaglia
+ * 
+ * Controls a cat animation moving left and right on the screen.
+ * Includes buttons to start, stop, speed up, and slow down the cat's movement.
+ * Shows current animation speed in milliseconds.
+ * 
+ * @example
+ * // Click "Start" to begin cat walking.
+ * // Click "Faster" or "Slower" to adjust speed.
+ * // Click "Stop" to halt animation.
+ * // Info text updates with speed (e.g., "Speed: 40ms").
+ */
+
 const cat = document.getElementById('cat');
 const startBtn = document.getElementById('start-btn');
 const fasterBtn = document.getElementById('faster-btn');
@@ -72,6 +86,6 @@ stopBtn.addEventListener('click', stopCat);
 fasterBtn.addEventListener('click', fasterCat);
 slowerBtn.addEventListener('click', slowerCat);
 
-// Inizializza stato
+// Initialize state
 setButtons(false);
 updateInfo();

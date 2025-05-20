@@ -1,3 +1,17 @@
+/**
+ * Author: Alessandro Scattaglia
+ * 
+ * Simulates a real-time flight table by generating flights,
+ * updating their status, removing old arrived flights, and redrawing the table every 5 seconds.
+ * 
+ * @example
+ * // Every 5 seconds:
+ * // - Adds a new flight with random airline, number, city, time, gate
+ * // - Updates status of existing flights (DEPARTING → ON_TIME → DELAYED → ARRIVED)
+ * // - Removes ARRIVED flights older than 60 seconds
+ * // - Sorts and displays flights in the table by scheduled time
+ */
+
 const flightsTable = document.getElementById('flights-table');
 let flights = [];
 

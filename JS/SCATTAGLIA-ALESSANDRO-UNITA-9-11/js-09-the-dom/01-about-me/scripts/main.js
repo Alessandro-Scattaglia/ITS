@@ -1,3 +1,19 @@
+/**
+ * Author: Alessandro Scattaglia
+ * 
+ * Updates user profile info on the page, adds styling to list items, inserts an image,
+ * and loads a CSS stylesheet after a delay.
+ * 
+ * @example
+ * // Sets body font to Arial
+ * // Changes nickname to "Ale Scatty"
+ * // Changes favorites to "Coding, Sleeping, Pizza"
+ * // Changes hometown to "Torino"
+ * // Adds "list-item" class to each <li>
+ * // Appends an image with width 200px
+ * // After 4 seconds, loads "css/style.css"
+ */
+
 document.body.style.fontFamily = "Arial, sans-serif";
 
 document.getElementById("nickname").innerText = "Ale Scatty";
