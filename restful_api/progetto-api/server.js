@@ -3,9 +3,9 @@ const mysql2 = require('mysql2');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-// dichiariamo su che porta risponderÃ  il server web
+// dichiariamo su che porta rispondera'  il server web
 const port = process.env.PORT || 3000
-//creiamo lâ€™istanza del server
+//creiamo l'istanza del server
 const app = express();
 
 // Connessione al database MySql

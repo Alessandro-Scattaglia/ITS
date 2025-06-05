@@ -1,0 +1,40 @@
+header.home{
+    height: calc(100vh - 56px);
+    background-image: url("./img/goldrake.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+hgroup {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h1,h2{
+    font-family: "Roboto", sans-serif;
+     font-weight: 900;
+      color: #000000b6;
+      font-size: 3rem;
+}
+
+@media (min-width: 576px){
+    h1,h2{
+        font-size: 7rem;
+    }
+}
+
+.griglia .foto{
+    background-color: #fff;
+    min-height: 150px;
+    height: 100%;
+}
+.griglia h2{
+    font-size: 2rem;
+}
+
+.griglia .txt{
+    height: auto;
+}

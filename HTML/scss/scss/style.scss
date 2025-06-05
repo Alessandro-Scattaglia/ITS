@@ -1,0 +1,144 @@
+// custom.scss
+
+// 1. Include functions first
+@import "vendor/functions";
+
+// 2. Definisci le variabili personalizzate (colori base)
+$blue: #0d6efd;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #d63384;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #198754;
+$teal: #20c997;
+$cyan: #0dcaf0;
+$white: #ffffff;
+$gray: #6c757d;
+$dark: #212529;
+
+// 2b. Associa colori semanticamente
+$primary: $blue;
+$secondary: $gray;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $white;
+
+// 3. Importa i file di variabili Bootstrap
+@import "vendor/variables";
+@import "vendor/variables-dark";
+
+// 4. Override opzionali di mappe
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4,
+);
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "gray": $gray,
+  "white": $white,
+  "purple": $purple,
+  "cyan": $cyan,
+  "dark": $dark,
+  "pink": $pink,
+);
+
+// 5. Importa i restanti file Bootstrap
+@import "vendor/maps";
+@import "vendor/mixins";
+@import "vendor/root";
+
+// 6. Altri moduli opzionali
+@import "vendor/utilities";
+@import "vendor/reboot";
+@import "vendor/type";
+@import "vendor/images";
+@import "vendor/containers";
+@import "vendor/grid";
+@import "vendor/helpers";
+@import "vendor/buttons";
+@import "vendor/tables";
+// ...
+
+// 7. Utilizza le utilities API per generare classi dinamiche
+@import "vendor/utilities/api";
+
+// 8. Codice personalizzato
+body {
+  background-color: $primary;
+
+  @include media-breakpoint-up(sm) {
+    background-color: $secondary;
+  }
+
+  @include media-breakpoint-up(md) {
+    background-color: $success;
+  }
+
+  @include media-breakpoint-up(lg) {
+    background-color: $danger;
+  }
+
+  @include media-breakpoint-up(xl) {
+    background-color: $warning;
+  }
+}
+
+.prima {
+  .item-1,
+  .item-2 {
+    height: 5vh;
+    background-color: #dc3545;
+    h2 {
+      color: #fd7e14;
+      @include media-breakpoint-up(lg) {
+        color: #ffc107;
+      }
+    }
+  }
+}
+.seconda {
+  .item {
+   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; /* Centra TUTTO orizzontalmente */
+  height: 100%;
+  padding: 1rem 0;
+    background-color: #d63384;
+    height: 25vh;
+    @include media-breakpoint-up(lg) {
+      background-color: #fd7e14;
+      height: 50vh;
+    }
+  }
+}
+.seconda .item .descrizione {
+  margin-bottom: 1rem; 
+}
+
+
+.seconda .item a.btn {
+  align-self: center;
+  color:#ffc107;
+}
+
+.seconda .price {
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+}
