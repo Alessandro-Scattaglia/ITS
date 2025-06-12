@@ -1,0 +1,183 @@
+// custom.scss
+
+// 1. Include functions first
+@import "vendor/functions";
+
+// 2. Definisci le variabili personalizzate (colori base)
+$blue: #0d6efd;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #d63384;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #198754;
+$teal: #20c997;
+$cyan: #0dcaf0;
+$white: #ffffff;
+$gray: #6c757d;
+$dark: #212529;
+
+// 2b. Associa colori semanticamente
+$primary: $blue;
+$secondary: $gray;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $white;
+
+// 3. Importa i file di variabili Bootstrap
+@import "vendor/variables";
+@import "vendor/variables-dark";
+
+// 4. Override opzionali di mappe
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4,
+);
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "gray": $gray,
+  "white": $white,
+  "purple": $purple,
+  "cyan": $cyan,
+  "dark": $dark,
+  "pink": $pink,
+);
+
+// 5. Importa i restanti file Bootstrap
+@import "vendor/maps";
+@import "vendor/mixins";
+@import "vendor/root";
+
+// 6. Altri moduli opzionali
+@import "vendor/utilities";
+@import "vendor/reboot";
+@import "vendor/type";
+@import "vendor/images";
+@import "vendor/containers";
+@import "vendor/grid";
+@import "vendor/helpers";
+@import "vendor/buttons";
+@import "vendor/tables";
+// ...
+
+// 7. Utilizza le utilities API per generare classi dinamiche
+@import "vendor/utilities/api";
+
+// 8. Codice personalizzato
+
+:root {
+  --primary: #0d6efd;
+  --secondary: #6c757d;
+  --success: #198754;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --dark: #212529;
+  --light: #f8f9fa;
+  --white: #ffffff;
+  --gray: #6c757d;
+  --blue-dark: #0b5ed7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.carousel-item {
+  transition: transform 0.8s ease-in-out;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  padding-top: 25px; 
+}
+.container.position-relative {
+  position: relative;
+  overflow: hidden;
+  padding: 60px 15px; /* spazio sopra e sotto per il contenuto */
+}
+
+.hero-section {
+  height: calc(100vh - 65px); /* tutta altezza viewport */
+  position: relative;
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/dist/img/laboratorio.jpg"); /* usa il percorso corretto */
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.text-white {
+  color: white !important;
+}
+
+/* Rimuovi l'override su .row perché Bootstrap gestisce già flex e gutter */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%; // per uniformare altezza
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  z-index: 5;
+}
+
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; // separa testo e prezzo
+}
+
+.sale-label {
+  border-bottom-right-radius: 4px;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card-price {
+  font-size: 1.25rem;
+  color: #333;
+}
