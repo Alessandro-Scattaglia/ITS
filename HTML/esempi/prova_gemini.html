@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolatore di Data e Durata Vita</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+            color: #333;
+        }
+
+       .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+        }
+
+       .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="number"],
+        select {
+            width: calc(100% - 20px);
+            padding: 12px 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+       .result-section {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            text-align: left;
+        }
+
+       .result-section p {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #333;
+        }
+
+       .result-section strong {
+            color: #2c3e50;
+        }
+
+       .error-message {
+            color: #e74c3c;
+            font-weight: bold;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calcolatore di Data e Durata Vita</h1>
+        <div class="input-group">
+            <label for="inputDay">Giorno:</label>
+            <input type="number" id="inputDay" min="1" max="31" placeholder="Es: 15">
+        </div>
+        <div class="input-group">
+            <label for="inputMonth">Mese:</label>
+            <select id="inputMonth">
+                <option value="">Seleziona Mese</option>
+                <option value="1">Gennaio</option>
+                <option value="2">Febbraio</option>
+                <option value="3">Marzo</option>
+                <option value="4">Aprile</option>
+                <option value="5">Maggio</option>
+                <option value="6">Giugno</option>
+                <option value="7">Luglio</option>
+                <option value="8">Agosto</option>
+                <option value="9">Settembre</option>
+                <option value="10">Ottobre</option>
+                <option value="11">Novembre</option>
+                <option value="12">Dicembre</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="inputYear">Anno:</label>
+            <input type="number" id="inputYear" placeholder="Es: 1995 (o per a.C.: 1, 2,...)">
+        </div>
+        <div class="input-group">
+            <label for="selectEra">Era:</label>
+            <select id="selectEra">
+                <option value="AD">d.C.</option>
+                <option value="BC">a.C.</option>
+            </select>
+        </div>
+        <button id="calculateBtn">Calcola</button>
+
+        <div class="result-section">
+            <p><strong>Giorno della Settimana:</strong> <span id="dayOfWeekResult"></span></p>
+            <p><strong>Durata Vita:</strong></p>
+            <p id="lifeDurationResult"></p>
+            <p class="error-message" id="errorMessage"></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('calculateBtn').addEventListener('click', calculateResults);
+
+        function calculateResults() {
+            const day = parseInt(document.getElementById('inputDay').value);
+            const month = parseInt(document.getElementById('inputMonth').value);
+            const year = parseInt(document.getElementById('inputYear').value);
+            const era = document.getElementById('selectEra').value;
+            const errorMessageElement = document.getElementById('errorMessage');
+
+            errorMessageElement.textContent = ''; // Clear previous errors
+
+            if (isNaN(day) |
+| isNaN(month) |
+| isNaN(year) ||!day ||!month ||!year) {
+                errorMessageElement.textContent = 'Per favore, inserisci una data completa.';
+                return;
+            }
+
+            // Basic date validation (more robust validation is in isValidDate function)
+            if (day < 1 |
+| day > 31 |
+| month < 1 |
+| month > 12 |
+| year === 0) {
+                errorMessageElement.textContent = 'Data inserita non valida. Controlla giorno, mese e anno.';
+                return;
+            }
+
+            if (!isValidDate(day, month, year, era)) {
+                errorMessageElement.textContent = 'La data inserita non è una data valida (es. Febbraio 30, anno bisestile, ecc.).';
+                return;
+            }
+
+            // Day of Week Calculation
+            const dayOfWeek = calculateDayOfWeek(day, month, year, era);
+            document.getElementById('dayOfWeekResult').textContent = dayOfWeek;
+
+            // Life Duration Calculation
+            // For life duration, we always use AD/CE for the birth date when creating a Date object
+            // The year for Date object must be positive for AD, or negative for BC (astronomical)
+            let birthYearForDate = year;
+            if (era === 'BC') {
+                birthYearForDate = -(year - 1); // Convert BC to astronomical year (1 BC = 0, 2 BC = -1) [3]
+            }
+            
+            // JavaScript Date object handles year 0 as 1 BC, -1 as 2 BC, etc.
+            // However, it has limitations for dates before 1900, especially for getDay()
+            // The Zeller's congruence handles BC/AD and Julian/Gregorian correctly.
+            // For age calculation, we create a Date object and then calculate duration.
+            // The Date object range is April 20, 271821 BC to September 13, 275760 AD [4, 5]
+            // So, for age calculation, we can use Date objects directly, but need to be careful with BC year conversion.
+            const birthDate = new Date(birthYearForDate, month - 1, day); // Month is 0-indexed in JS Date object
+
+            if (isNaN(birthDate.getTime())) { // Check for invalid date object
+                errorMessageElement.textContent = 'Errore nella creazione della data di nascita. Controlla i valori.';
+                return;
+            }
+
+            const lifeDuration = calculateLifeDuration(birthDate);
+            document.getElementById('lifeDurationResult').textContent = lifeDuration;
+        }
+
+        // Helper function for date validation (e.g., Feb 30, non-leap year Feb 29)
+        function isValidDate(d, m, y, era) {
+            if (y === 0 && era === 'AD') return false; // Year 0 does not exist in common era (AD)
+            if (y < 0 && era === 'BC') return false; // Negative BC years are not standard input (handled by astronomical conversion)
+
+            let testYear = y;
+            if (era === 'BC') {
+                testYear = -(y - 1); // Astronomical year for validation
+            }
+
+            const date = new Date(testYear, m - 1, d);
+            return date.getFullYear() === testYear && date.getMonth() === m - 1 && date.getDate() === d;
+        }
+
+        // --- Zeller's Congruence for Day of Week ---
+        function calculateDayOfWeek(day, month, year, era) {
+            let adjustedYear = year;
+            let adjustedMonth = month;
+
+            // Convert BC year to astronomical year numbering for calculation [3]
+            if (era === 'BC') {
+                adjustedYear = -(year - 1); // 1 BC = 0, 2 BC = -1, etc.
+            }
+
+            // Adjust month and year for Zeller's congruence (Jan/Feb become 13/14 of previous year) [1, 6]
+            if (adjustedMonth <= 2) {
+                adjustedMonth += 12;
+                adjustedYear--;
+            }
+
+            const q = day; // Day of the month
+            const m = adjustedMonth; // Adjusted month (3=Mar,..., 14=Feb)
+            const K = adjustedYear % 100; // Year of the century
+            const J = Math.floor(adjustedYear / 100); // Zero-based century
+
+            let h; // Day of the week (0=Sat, 1=Sun,..., 6=Fri)
+
+            // Determine if Julian or Gregorian calendar rules apply [1]
+            // Gregorian calendar adopted on Oct 15, 1582. Dates before are Julian.
+            const isGregorian = (adjustedYear > 1582) ||
+                                (adjustedYear === 1582 && m > 10) |
+| // Month 10 is October (original month, not adjusted)
+                                (adjustedYear === 1582 && m === 10 && q >= 15);
+
+            if (isGregorian) {
+                // Gregorian Calendar formula [6]
+                // Using +5*J instead of -2*J for positive numerator [1]
+                h = (q + Math.floor(13 * (m + 1) / 5) + K + Math.floor(K / 4) + Math.floor(J / 4) + 5 * J) % 7;
+            } else {
+                // Julian Calendar formula [6]
+                // Using +6*J instead of -J for positive numerator [1]
+                h = (q + Math.floor(13 * (m + 1) / 5) + K + Math.floor(K / 4) + 5 + 6 * J) % 7;
+            }
+
+            const dayNames =;
+            return dayNames[h];
+        }
+
+        // --- Precise Life Duration Calculation ---
+        function calculateLifeDuration(birthDate) {
+            const now = new Date();
+            let totalMilliseconds = now.getTime() - birthDate.getTime();
+
+            // Handle future dates (if birthDate is in the future)
+            if (totalMilliseconds < 0) {
+                return "La data di nascita non può essere nel futuro.";
+            }
+
+            // Precise Years and Months Calculation (iterative approach)
+            let years = 0;
+            let months = 0;
+            let tempBirthDate = new Date(birthDate.getTime()); // Create a mutable copy
+
+            // Calculate years
+            while (true) {
+                const nextYearDate = new Date(tempBirthDate.getFullYear() + 1, tempBirthDate.getMonth(), tempBirthDate.getDate());
+                if (nextYearDate.getTime() <= now.getTime()) {
+                    years++;
+                    tempBirthDate.setFullYear(tempBirthDate.getFullYear() + 1);
+                } else {
+                    break;
+                }
+            }
+
+            // Calculate months from remaining period
+            while (true) {
+                const nextMonthDate = new Date(tempBirthDate.getFullYear(), tempBirthDate.getMonth() + 1, tempBirthDate.getDate());
+                // Handle month overflow (e.g., Jan 31 + 1 month = March 2)
+                // If nextMonthDate's day is not the same as tempBirthDate's day, it means it overflowed.
+                // We need to set it to the last day of the next month.
+                if (nextMonthDate.getDate()!== tempBirthDate.getDate()) {
+                    nextMonthDate.setDate(0); // Set to last day of previous month
+                    nextMonthDate.setMonth(tempBirthDate.getMonth() + 1); // Then set to correct month
+                }
+
+                if (nextMonthDate.getTime() <= now.getTime()) {
+                    months++;
+                    tempBirthDate.setMonth(tempBirthDate.getMonth() + 1);
+                } else {
+                    break;
+                }
+            }
+
+            // Calculate remaining days, hours, minutes, seconds from the adjusted period
+            // Use UTC timestamps to avoid DST issues for remaining calculations [13, 14]
+            const remainingMilliseconds = now.getTime() - tempBirthDate.getTime();
+
+            const seconds = Math.floor(remainingMilliseconds / 1000);
+            const minutes = Math.floor(seconds / 60);
+            const hours = Math.floor(minutes / 60);
+            const days = Math.floor(hours / 24);
+            const weeks = Math.floor(days / 7);
+
+            const remainingSeconds = seconds % 60;
+            const remainingMinutes = minutes % 60;
+            const remainingHours = hours % 24;
+            const remainingDays = days % 7; // Days after accounting for full weeks
+
+            return `${years} anni, ${months} mesi, ${weeks} settimane, ${remainingDays} giorni, ${remainingHours} ore, ${remainingMinutes} minuti, ${remainingSeconds} secondi.`;
+        }
+    </script>
+</body>
+</html>

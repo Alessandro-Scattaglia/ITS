@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolatore Giorno della Settimana e Tempo Trascorso</title>
+    <style>
+        /* Stile del corpo della pagina */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+
+        /* Contenitore principale */
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        /* Form */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .form-group label {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            transition: all 0.2s;
+            pointer-events: none;
+        }
+
+        .form-group input:focus + label, .form-group input:valid + label {
+            top: -10px;
+            font-size: 12px;
+            color: #2575fc;
+            background: white;
+            padding: 0 5px;
+        }
+
+        .form-group input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .form-group select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #2575fc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #1a5bb7;
+        }
+
+        /* Risultati */
+        #result {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s;
+        }
+
+        #result.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #timePassed p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calcolatore Giorno della Settimana e Tempo Trascorso</h1>
+        <form id="dateForm">
+            <div class="form-group">
+                <label for="day">Giorno</label>
+                <input type="number" id="day" name="day" min="1" max="31" required>
+            </div>
+            <div class="form-group">
+                <label for="month">Mese</label>
+                <input type="number" id="month" name="month" min="1" max="12" required>
+            </div>
+            <div class="form-group">
+                <label for="year">Anno</label>
+                <input type="number" id="year" name="year" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="era">Era</label>
+                <select id="era" name="era" required>
+                    <option value="dc">d.C.</option>
+                    <option value="ac">a.C.</option>
+                </select>
+            </div>
+            <button type="submit">Calcola</button>
+        </form>
+        <div id="result">
+            <h2>Risultati</h2>
+            <p id="dayOfWeek"></p>
+            <div id="timePassed">
+                <p><span id="years"></span> anni</p>
+                <p><span id="months"></span> mesi</p>
+                <p><span id="weeks"></span> settimane</p>
+                <p><span id="days"></span> giorni</p>
+                <p><span id="hours"></span> ore</p>
+                <p><span id="minutes"></span> minuti</p>
+                <p><span id="seconds"></span> secondi</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        let enteredDate;
+
+        function updateDisplay() {
+            if (!enteredDate) return;
+            
+            const now = new Date();
+            const diffMs = now - enteredDate;
+            const diffSeconds = Math.floor(diffMs / 1000);
+            const diffMinutes = Math.floor(diffSeconds / 60);
+            const diffHours = Math.floor(diffMinutes / 60);
+            const diffDays = Math.floor(diffHours / 24);
+            const diffWeeks = Math.floor(diffDays / 7);
+            const diffMonths = Math.floor(diffDays / 30.44);
+            const diffYears = Math.floor(diffDays / 365.25);
+            
+            document.getElementById('years').textContent = diffYears;
+            document.getElementById('months').textContent = diffMonths;
+            document.getElementById('weeks').textContent = diffWeeks;
+            document.getElementById('days').textContent = diffDays;
+            document.getElementById('hours').textContent = diffHours;
+            document.getElementById('minutes').textContent = diffMinutes;
+            document.getElementById('seconds').textContent = diffSeconds;
+        }
+
+        document.getElementById('dateForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Ottieni i valori del form
+            const day = parseInt(document.getElementById('day').value);
+            const month = parseInt(document.getElementById('month').value);
+            const year = parseInt(document.getElementById('year').value);
+            const era = document.getElementById('era').value;
+            
+            // Adatta l'anno per a.C.
+            let jsYear = era === 'ac' ? 1 - year : year;
+            
+            // Crea l'oggetto Date
+            enteredDate = new Date(jsYear, month - 1, day);
+            
+            // Valida la data
+            if (enteredDate.getFullYear() !== jsYear || enteredDate.getMonth() !== month - 1 || enteredDate.getDate() !== day) {
+                document.getElementById('result').innerHTML = '<p>Data non valida</p>';
+                document.getElementById('result').classList.add('visible');
+                return;
+            }
+            
+            // Ottieni il giorno della settimana
+            const days = ["Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato"];
+            const dayOfWeek = days[enteredDate.getDay()];
+            
+            // Mostra i risultati
+            document.getElementById('dayOfWeek').textContent = `Il giorno della settimana era: ${dayOfWeek}`;
+            document.getElementById('result').classList.add('visible');
+            
+            // Avvia l'aggiornamento del tempo trascorso
+            updateDisplay();
+            setInterval(updateDisplay, 1000);
+        });
+    </script>
+</body>
+</html>
