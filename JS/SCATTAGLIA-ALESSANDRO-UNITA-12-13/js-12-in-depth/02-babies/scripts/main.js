@@ -1,3 +1,18 @@
+/**
+ * @description Demonstrates creating and managing a list of baby objects,
+ * using object literals, Object.assign, and a factory function. It shows how to add properties dynamically
+ * and iterate through nested data structures. Each baby has a name, age in months, favorite noises, and foods.
+ * An outfit object is later added to each baby. Outputs all properties and final objects to the console.
+ * @author Alessandro Scattaglia
+ * @output
+ * [name: "Lyla"]
+ * [months: 8]
+ * [noises: ["laugh","giggle"]]
+ * [favoriteFoods: ["banana","carrot"]]
+ * ...
+ * (repeated for each baby, then final full baby objects with outfits)
+ */
+
 let babies = [];
 
 let baby1 = {
@@ -51,5 +66,3 @@ for (let baby of babies) {
 for (let baby of babies) {
   console.log(baby);
 }
-
-
