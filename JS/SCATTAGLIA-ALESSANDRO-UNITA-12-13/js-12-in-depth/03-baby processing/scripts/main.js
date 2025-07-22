@@ -1,7 +1,22 @@
-// Array to store all babies
+/**
+ * @description Manages an array of baby objects using object literals and a factory function.
+ * Each baby has a name, age in months, noises, favorite foods, and an outfit.
+ * Includes functions to describe the outfit and simulate feeding with random food order.
+ * Demonstrates object construction, method abstraction, array shuffling, and string formatting.
+ * @author Alessandro Scattaglia
+ * @output
+ * Emma is wearing a red shirt, black pants and yellow shoes
+ * Emma is eating peas and rice
+ * Luca is wearing a red shirt, black pants and yellow shoes
+ * Luca is eating melon and grapes
+ * Chloe is wearing a red shirt, black pants and yellow shoes
+ * Chloe is eating broccoli and potato
+ * Noah is wearing a red shirt, black pants and yellow shoes
+ * Noah is eating corn and strawberry
+ */
+
 let babies = [];
 
-// Create baby objects and add them to the array
 let baby1 = {
   name: "Emma",
   months: 8,
@@ -37,7 +52,6 @@ function createBaby(name, months, noises, favoriteFoods) {
 let baby4 = createBaby("Noah", 9, ["grunt", "whistle"], ["strawberry", "corn"]);
 babies.push(baby4);
 
-// Add outfit to each baby
 for (let baby of babies) {
   baby.outfit = {
     shirt: "red",
@@ -46,16 +60,14 @@ for (let baby of babies) {
   };
 }
 
-// Function that returns a sentence with the baby's outfit
 function getBabyOutfit(baby) {
   return baby.name + " is wearing a " + baby.outfit.shirt + " shirt, " +
          baby.outfit.pants + " pants and " + baby.outfit.shoes + " shoes";
 }
 
-// Function that prints what the baby is eating (random order)
 function feedBaby(baby) {
-  let foods = baby.favoriteFoods.slice(); // Copy the array
-  foods.sort(() => Math.random() - 0.5); // Shuffle it
+  let foods = baby.favoriteFoods.slice();
+  foods.sort(() => Math.random() - 0.5);
 
   let sentence = baby.name + " is eating ";
   if (foods.length === 1) {
@@ -68,7 +80,6 @@ function feedBaby(baby) {
   console.log(sentence);
 }
 
-// Run both functions on all babies
 for (let baby of babies) {
   console.log(getBabyOutfit(baby));
   feedBaby(baby);

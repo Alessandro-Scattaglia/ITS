@@ -1,3 +1,26 @@
+/**
+ * @description Transforms each word in the array by capitalizing each character in turn,
+ * adding an increasing number of exclamation marks. Stores all transformed versions
+ * in the result array. This demonstrates nested loops, string manipulation, and array methods.
+ * @author Alessandro Scattaglia
+ * @output
+ * Quack!
+ * qUack!!
+ * quAck!!!
+ * quaCk!!!!
+ * quacK!!!!!
+ * Sneeze!
+ * sNeeze!!
+ * snEeze!!!
+ * sneEze!!!!
+ * sneeZe!!!!!
+ * sneezE!!!!!!
+ * Boom!
+ * bOom!!
+ * boOm!!!
+ * booM!!!!
+ */
+
 let noisesArray = ['quack', 'sneeze', 'boom'];
 let result = [];
 

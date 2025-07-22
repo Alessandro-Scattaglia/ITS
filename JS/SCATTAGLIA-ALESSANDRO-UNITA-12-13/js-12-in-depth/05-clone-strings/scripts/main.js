@@ -1,5 +1,26 @@
-// Function to clone only string properties of an object recursively
-function cloneStrings(obj) {
+/**
+ * @description Recursively clones only string properties from an object, ignoring all other types.
+ * Useful for extracting textual content from deeply nested objects. Demonstrates recursive object traversal,
+ * type checking, and selective copying of data structures.
+ * @author Alessandro Scattaglia
+ * @output
+ * {
+ *   name: 'Green Mueller',
+ *   email: 'Rigoberto_Muller47@yahoo.com',
+ *   address: '575 Aiden Forks',
+ *   bio: 'Tenetur voluptatem odit labore et voluptatem vel qui placeat sit.',
+ *   bankInformation: {
+ *     amount: '802.04',
+ *     business: 'Bernhard, Kuhn and Stehr',
+ *     name: 'Investment Account 8624',
+ *     type: 'payment',
+ *     account: '34889694'
+ *   }
+ * }
+ */
+
+ // Function to clone only string properties of an object recursively
+ function cloneStrings(obj) {
   let copy = {};
   for (let key in obj) {
     let value = obj[key];

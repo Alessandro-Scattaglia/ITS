@@ -1,5 +1,15 @@
-// Function to clone a simple object (shallow copy, no deep cloning)
-function clone(obj) {
+/**
+ * @description Demonstrates how to create a shallow copy of an object using a custom clone function.
+ * Modifies the cloned object to show that the original remains unchanged. Nested objects remain shared due to shallow copy.
+ * Useful for understanding object references, shallow vs deep cloning, and object manipulation.
+ * @author Alessandro Scattaglia
+ * @output
+ * Original person name: Green Mueller
+ * Cloned person name: David Jefferson
+ */
+
+ // Function to clone a simple object (shallow copy, no deep cloning)
+ function clone(obj) {
   let copy = {}; // New empty object
 
   // Copy all properties from original to copy
