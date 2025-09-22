@@ -19,6 +19,6 @@ function getWeekDay(date, language) {
     }
 }
 
-console.log(getWeekDay(new Date(2023, 1, 1), 'en')); 
+console.log(getWeekDay(new Date(2025, 8, 22), 'en')); 
 console.log(getWeekDay(new Date(2023, 0, 1), 'it')); 
 console.log(getWeekDay(new Date(2025, 2, 28), 'it')); 
