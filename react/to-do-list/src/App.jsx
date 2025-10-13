@@ -1,13 +1,19 @@
 import './App.css'
-import TodoItem from './TodoItem';
-import dummyTask from './data/dummyTask';
+import TodoList from './components/TodoList'
+import Container from './components/Container'
+import dummyTasks from './data/dummyTasks'
 
 function App() {
 
+
   return (
-    <div className="container">
-      {dummyTask.map((task) => <TodoItem task={task}/>)}
-    </div>
+    
+      <Container>
+        <TodoList tasks={dummyTasks} />
+      </Container>
+
+     
+    
   )
 }
 

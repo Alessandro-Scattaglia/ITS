@@ -12,7 +12,7 @@ const dummyTasks = [
   {
     id: 3,
     text: 'Studiare React',
-    status: 'pending',
+    status: 'progress',
   },
   {
     id: 4,

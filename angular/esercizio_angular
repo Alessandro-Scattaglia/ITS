@@ -1,0 +1,15 @@
+Nel progetto Olimpiadi creare :
+-un modulo amministrazione con dentro i componenti
+	-login
+	- gestione-atleti
+
+- un modulo negozio che contenga al suo interno i componenti
+	- atleta-list
+	- selezione
+
+-un servizio in una cartella core di nome
+	- data-source che restituisca l'elenco degli atleti da utilizzare in gestione-atleti
+
+- le rotte nel file di routing
+
+- testare il tutto
