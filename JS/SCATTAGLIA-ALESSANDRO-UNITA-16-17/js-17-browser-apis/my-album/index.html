@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Album</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background: #f0f0f0;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 150px);
+      gap: 10px;
+    }
+    .gallery img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      cursor: grab;
+    }
+    .buttons {
+      margin: 1rem 0;
+    }
+    button {
+      padding: 0.5rem;
+      margin-right: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>My Album</h1>
+  <div class="buttons">
+    <button id="addImage">Add New Image</button>
+    <button id="removeImage">Remove Last Image</button>
+  </div>
+  <div class="gallery" id="gallery"></div>
+
+  <script src="./scripts/main.js"></script>
+</body>
+</html>
