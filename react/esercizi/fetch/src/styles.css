@@ -1,0 +1,50 @@
+.App {
+  font-family: sans-serif;
+  font-size: 1rem;
+  padding: 2rem;
+}
+
+button {
+  background-color: rgb(22, 22, 188);
+  color: #f6f6f6;
+  border: 1px solid rgb(22, 22, 188);
+  padding: 0.25rem 1.2rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+
+textarea {
+  border: 1px solid rgb(22, 22, 188);
+  border-radius: 8px;
+  width: 100%;
+}
+
+button:hover {
+  color: rgb(22, 22, 188);
+  background-color: #f6f6f6;
+}
+
+.notification {
+  position: fixed;
+  bottom: 1;
+  right: 2rem;
+  background-color: rgb(171, 225, 171);
+  padding: 2rem;
+  transform: translateY(900%);
+  transition: transform 0.24s ease-out;
+  will-change: transform;
+}
+
+.notification.is-visible {
+  transform: translateY(0%);
+}
+
+.user-card {
+  background-color: #f6f6f6;
+  padding: 1rem 2rem;
+  margin: 1rem auto;
+  border-radius: 8px;
+  border: 1px solid rgb(22, 22, 188);
+}

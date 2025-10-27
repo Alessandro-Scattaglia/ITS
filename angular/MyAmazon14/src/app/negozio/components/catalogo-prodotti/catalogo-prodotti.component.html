@@ -1,0 +1,54 @@
+<div  *ngIf="loading" class="text-danger p-2">Sto caricando i dati....</div>
+
+<div *ngIf="messaggioErrore">Errore: {{messaggioErrore}}</div>
+
+<div class="row" >
+    
+    <div class="col-3 p-2" *ngIf="!loading">
+        <div class="btn-group-vertical w-100" role="group">
+            <button class="btn btn-outline-primary m-1"
+            (click)="setCategoriaSelezionata('')"
+            >Tutte</button>
+            
+            <button *ngFor="let categoria of categorie" 
+            class="btn btn-outline-primary m-1"
+            (click)="setCategoriaSelezionata(categoria)"
+            >{{categoria}}</button>
+        </div>
+        
+    </div>
+
+    <div class="col-9 p-2">
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">    
+
+
+        <div *ngFor="let prodotto of prodotti" class="card h-100 shadow-sm">
+            <img [src]="prodotto.imgUrl" 
+            class="card-img-top w-50" 
+            [attr.alt]="prodotto.nome">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title"> {{prodotto.nome}}
+                    <span class="badge bg-primary float-end"> {{prodotto.prezzo}}</span>
+                </h5> 
+                <h6 class="card-subtitle mb-2">Categoria: {{prodotto.categoria}}</h6>
+                <p class="card-text mb-3">
+                    {{prodotto.descrizione}}
+                </p>   
+                <div class="mt-auto">
+                    <button class="btn btn-primary btn-sm">
+                        AggiunGi al carrello
+                    </button>
+                </div>
+            </div> 
+
+        </div>
+
+
+       
+    </div>
+</div>
+
+
+
+</div>

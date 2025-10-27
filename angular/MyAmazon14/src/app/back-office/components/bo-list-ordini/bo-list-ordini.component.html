@@ -1,0 +1,20 @@
+<h3>Gestione ordini , totali {{ordini.length}}</h3>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+        <th>Id</th>
+        <th>Id Utente</th>
+        <th>Data Ordine</th>
+        <th>Totale Ordine</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let ordine of ordini">
+            <td>{{ordine.id}}</td>
+            <td>{{ordine.id_utente}}</td>
+            <td>{{ordine.data_ordine}}</td>
+            <td>{{ordine.totale_ordine}}</td>
+        </tr>
+
+    </tbody>
+</table>
