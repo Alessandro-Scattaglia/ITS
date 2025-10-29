@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Prodotto } from 'src/app/core/models/prodotto.model';
 import { RestDataSourceService } from 'src/app/core/services/rest-data-source.service';
 import { StaticDataSourceService } from 'src/app/core/services/static-data-source.service';
+import { CarrelloService } from '../../services/carrello.service';
 
 @Component({
   selector: 'app-catalogo-prodotti',
@@ -10,6 +11,9 @@ import { StaticDataSourceService } from 'src/app/core/services/static-data-sourc
   ]
 })
 export class CatalogoProdottiComponent implements OnInit {
+
+  
+
 
   // varibile di istanzas per gestire il caricamento dei dati e il differente layout
   loading = true;
@@ -21,17 +25,28 @@ export class CatalogoProdottiComponent implements OnInit {
   categorie: string[] =[];
   private _prodotti:Prodotto[] =[];
 
+ 
   // prima versipone con data source statico
   //constructor(private dataSource: StaticDataSourceService) {
-  constructor(private dataSource: RestDataSourceService) { }
+  constructor(private dataSource: RestDataSourceService, 
+    public carrello:CarrelloService) { }
+
+
+  aggiungiAlCarrello(prodotto:Prodotto){
+   // this.carrello.prodottiInCarrello.push(prodotto);
+    this.carrello.aggiungi(prodotto);
+  }
+
 
    setCategoriaSelezionata(nuovaCategoria: string ){
     this.categoriaSelezionata = nuovaCategoria;
    }
+   
 
    get prodotti(){
 
-     return this._prodotti.filter(p=>this.categoriaSelezionata ==='' || p.categoria === this.categoriaSelezionata   );
+     return this._prodotti
+     .filter(p=>this.categoriaSelezionata ==='' || p.categoria === this.categoriaSelezionata   );
    }
 
 
@@ -66,5 +81,11 @@ export class CatalogoProdottiComponent implements OnInit {
     */
   
   }
+
+
+
+
+
+
 
 }

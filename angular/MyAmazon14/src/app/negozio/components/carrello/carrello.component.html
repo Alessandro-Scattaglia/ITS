@@ -1,1 +1,54 @@
-<p>carrello works!</p>
+<div class="p-3">
+    <div *ngIf="!(carrello.prodottiInCarrello?.length)">
+        <h1>Sommario carrello</h1>
+        <div class="alert alert-info">Il carrello è vuoto.</div>
+          <button class="btn btn-primary m-2" routerLink="/catalogo">Torna al catalogo</button>
+    </div>
+
+    <div *ngIf="carrello.prodottiInCarrello?.length">
+        <table class="table table-striped table-bordered align-middle">
+            <thead>
+                <tr>
+                    <th style="width:160px">Quantità</th>
+                    <th>Nome</th>
+                    <th style="width:120px">Prezzo</th>
+                    <th style="width:140px">Subtotale</th>
+                    <th style="width:120px">Azioni</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of carrello.prodottiInCarrello">
+                    <td>
+                        <div class="btn-group">
+                            <button class="btn btn-sm btn-outline-secondary"
+                                (click)="carrello.diminuisciQuantita(item.idProdotto)">-</button>
+                            <span class="px-2">{{ item.quantita }}</span>
+                            <button class="btn btn-sm btn-outline-secondary"
+                                (click)="carrello.aumentaQuantita(item.idProdotto)">+</button>
+                        </div>
+                    </td>
+                    <td>{{ item.nome }}</td>
+                    <td class="text-end">{{ item.prezzo | number:'1.2-2' }} €</td>
+                    <td class="text-end">{{ (item.prezzo * item.quantita) | number:'1.2-2' }} €</td>
+                    <td class="text-center">
+                        <button class="btn btn-sm btn-danger"
+                            (click)="carrello.rimuoviProdotto(item.idProdotto)">Rimuovi</button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="text-end"><strong>Totale</strong></td>
+                    <td class="text-end"><strong>{{ carrello.totalePrezziInCarrello | number:'1.2-2' }} €</strong></td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <div>
+            <button class="btn btn-primary m-2" routerLink="/catalogo">Torna al catalogo</button>
+            <button class="btn btn-success m-2" routerLink="/checkout">Completa l'ordine</button>
+        </div>
+    </div>
+</div>

@@ -1,1 +1,43 @@
-<p>checkout works!</p>
+<form #formCheckout="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group mb-3">
+        <label>Nome</label>
+        <input type="text" class="form-control" placeholder="Nome" name="nome" [(ngModel)]="datiOrdine.nome" required>
+    </div>
+
+    <div class="form-group mb-3">
+        <label>Cognome</label>
+        <input type="text" class="form-control" placeholder="Cognome" name="cognome" [(ngModel)]="datiOrdine.cognome"
+            required>
+    </div>
+
+    <div class="form-group mb-3">
+        <label>Indirizzo</label>
+        <input type="text" class="form-control" placeholder="Indirizzo" name="indirizzo"
+            [(ngModel)]="datiOrdine.indirizzo" required>
+    </div>
+
+    <div class="form-group mb-3">
+        <label>Città</label>
+        <input type="text" class="form-control" placeholder="Città" name="citta" [(ngModel)]="datiOrdine.citta"
+            required>
+    </div>
+
+    <div class="form-group mb-3">
+        <label>Metodo di Pagamento</label>
+        <select class="form-select" name="metodoPagamento" [(ngModel)]="datiOrdine.metodoPagamento" required>
+            <option value="" disabled>Seleziona pagamento</option>
+            <option *ngFor="let metodo of metodiPagamento" [value]="metodo">
+                {{metodo}}
+            </option>
+        </select>
+    </div>
+
+    <div class="d-flex justify-content-between mt-3">
+        <button type="button" class="btn btn-primary" (click)="tornaAlCarrello()">
+            Torna al Carrello
+        </button>
+        <button type="submit" class="btn btn-success" [disabled]="!formCheckout.form.valid">
+            Invia Ordine
+        </button>
+    </div>
+</form>

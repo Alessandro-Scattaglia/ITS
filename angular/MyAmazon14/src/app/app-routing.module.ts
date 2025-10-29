@@ -9,7 +9,8 @@ const routes: Routes = [
   { path: '', redirectTo: 'catalogo', pathMatch: 'full' },
   { path: 'catalogo', component: CatalogoProdottiComponent },
   { path: 'carrello', component: CarrelloComponent },
-  { path: 'checkout', component: CheckoutComponent },
+  { path: 'checkout', component: CheckoutComponent   },
+
    { path: 'error-page', component: ErrorPageComponent },
   // caricamento lazy del modulo amministrazione
   {
