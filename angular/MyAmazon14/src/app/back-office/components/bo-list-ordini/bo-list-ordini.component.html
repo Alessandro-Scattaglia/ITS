@@ -3,7 +3,8 @@
     <thead>
         <tr>
         <th>Id</th>
-        <th>Id Utente</th>
+        <th>Cognome</th>
+        <th>Nome</th>
         <th>Data Ordine</th>
         <th>Totale Ordine</th>
         </tr>
@@ -11,7 +12,8 @@
     <tbody>
         <tr *ngFor="let ordine of ordini">
             <td>{{ordine.id}}</td>
-            <td>{{ordine.id_utente}}</td>
+            <td>{{ordine.cognome}}</td>
+            <td>{{ordine.nome}}</td>
             <td>{{ordine.data_ordine}}</td>
             <td>{{ordine.totale_ordine}}</td>
         </tr>

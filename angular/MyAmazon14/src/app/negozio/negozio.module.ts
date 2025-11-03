@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { CatalogoProdottiComponent } from './components/catalogo-prodotti/catalogo-prodotti.component';
 import { CarrelloComponent } from './components/carrello/carrello.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
-import { AppRoutingModule } from "src/app/app-routing.module";
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
@@ -14,8 +16,8 @@ import { AppRoutingModule } from "src/app/app-routing.module";
   ],
   imports: [
     CommonModule,
-    FormsModule,
-    AppRoutingModule
-]
+    RouterModule,
+    FormsModule
+  ]
 })
 export class NegozioModule { }

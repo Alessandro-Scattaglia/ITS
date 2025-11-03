@@ -131,6 +131,19 @@ app.delete("/api/v1/users/:id", (req, res) => {
 });
 */
 
+app.get("/api/v1/orders", (req, res) => {
+  // questo per mysql
+  //db.query('SELECT * FROM t_utente', (err, results) => {
+  db.all("SELECT * FROM t_ordini",  (err, results) => {
+    if (err) {
+      console.error(err);
+      res.status(500).send("Errore nel database");
+    } else {
+      res.json(results);
+    }
+  });
+});
+
 // Avviare il server
 app.listen(port, () => {
   console.log(`Server in ascolto sulla porta ${port}`);

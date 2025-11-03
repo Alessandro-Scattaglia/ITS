@@ -1,28 +1,57 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import Nav from './Nav'
+
+import ShopContext from '../store/shop-context'
+
 import { ShoppingCartSimpleIcon } from '@phosphor-icons/react'
 
+import logo from '../assets/Logo.png'
 import CartModal from './CartModal'
 
-import logo from '../assets/Logo.png'
-
-function Header({ cart }) {
+function Header() {
   const [openCart, setOpenCart] = useState(false)
-  const cartQuantity = cart.items.length
 
-  let modalActions = <button onClick={() => setOpenCart(false)}>Close</button>
+  const { cartData } = useContext(ShopContext)
+  const { items } = cartData || {}
+
+  const cartQuantity = items.length
+
+  let modalActions = (
+    <button
+      className='bg-secondary px-2 py-0.5 rounded-md hover:opacity-70 cursor-pointer transition-colors '
+      onClick={() => setOpenCart(false)}
+    >
+      Go back to shopping
+    </button>
+  )
 
   if (cartQuantity > 0) {
     modalActions = (
       <>
-        <button onClick={() => setOpenCart(false)}>Close</button>
-        <button>Checkout</button>
+        <button
+          className='bg-secondary px-2 py-0.5 rounded-md hover:opacity-70 cursor-pointer transition-colors'
+          onClick={() => console.log('Update cart')}
+        >
+          Update cart
+        </button>
+        <button className='bg-primary px-2 py-0.5 rounded-md hover:opacity-70 cursor-pointer transition-colors text-white'>
+          Checkout
+        </button>
       </>
     )
   }
 
+  /* 
+  const mainRoute = siteRoutes.find((r) => r.path === '/')
+  const childRoutes = mainRoute?.children ?? []
+  const topRoutes = siteRoutes.filter((r) => r.showInNav && r.path !== '/')
+  const navItems = [...childRoutes.filter((r) => r.showInNav), ...topRoutes]
+  */
+
   return (
     <header className='flex items-center justify-between container'>
       <img src={logo} />
+      <Nav className='ml-auto px-5' />
       <button
         className='text-white bg-primary px-3 py-1 rounded-md relative'
         onClick={() => setOpenCart(true)}
@@ -36,8 +65,13 @@ function Header({ cart }) {
           </span>
         )}
       </button>
+
       {openCart && (
-        <CartModal title='Your shopping cart' actions={modalActions} />
+        <CartModal
+          title='Your shopping cart'
+          actions={modalActions}
+          onClose={() => setOpenCart(false)}
+        />
       )}
     </header>
   )

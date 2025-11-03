@@ -4,7 +4,8 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
-  styles: [],
+  styles: [
+  ]
 })
 export class CheckoutComponent {
   // Dati del form
@@ -13,13 +14,13 @@ export class CheckoutComponent {
     cognome: '',
     indirizzo: '',
     citta: '',
-    metodoPagamento: '',
+    metodoPagamento: ''
   };
 
   // Metodi di pagamento disponibili
   metodiPagamento = ['Carta di Credito', 'PayPal', 'Bonifico Bancario'];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   onSubmit() {
     console.log('Ordine inviato:', this.datiOrdine);
@@ -30,7 +31,7 @@ export class CheckoutComponent {
       cognome: '',
       indirizzo: '',
       citta: '',
-      metodoPagamento: '',
+      metodoPagamento: ''
     };
   }
 
